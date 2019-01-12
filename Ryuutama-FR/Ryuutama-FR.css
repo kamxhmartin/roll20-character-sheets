@@ -60,6 +60,38 @@ input[type="number"] {
     margin: 0px 0px 2px 0px;
 }
 
+div.sheet-section-header {
+    margin-bottom: 0.5%;
+    margin-left  : 30%;
+    margin-top   : 1%;
+}
+
+div.sheet-weaponhead  {
+    text-align    : left;}
+
+div.sheet-weaponhead div {
+    display       : inline-block;
+    width         : 10%;}
+
+div.sheet-weaponhead div:nth-of-type(1) {
+    margin-left: 5%;}
+
+div.sheet-weaponhead div:nth-of-type(2) {
+    margin-left: 4%;}
+
+div.sheet-weaponhead div:nth-of-type(3),
+div.sheet-weaponhead div:nth-of-type(4) {
+    margin-left: -1%;}
+
+div.sheet-weaponhead div:nth-of-type(6) {
+    margin-left: -1.5%;}
+
+div.sheet-weaponhead div:nth-of-type(7) {
+    margin-left: 0.5%;}
+
+div.sheet-weaponhead div:nth-of-type(8) {
+    margin-left: 1%;}
+
 
 .sheet-ligne {
     display: table-row;
@@ -69,15 +101,14 @@ input[type="number"] {
     margin: 1px;
     white-space: nowrap;
 }
-
-.sheet-tcell{
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-    font-weight: bold;
+.sheet-tcell {
+    display         : table-cell;
+    text-align      : right;
+    vertical-align  : middle;
+    font-weight     : bold;
     background-color: transparent;
-    border: none;
-    padding: 1px 1px 1px 1px;
+    border          : none;
+    padding         : 1px 1px 1px 1px;
 }
 
 .sheet-tcell2{
@@ -88,6 +119,118 @@ input[type="number"] {
     border: none;
     padding: 1px 1px 1px 1px;
 }
+
+/* ===== DIV NO TABLE ===== */
+
+div.sheet-tab-npc-sheet label,
+div.sheet-tab-gm-sheet label {
+    display   : inline-block;
+    font-size : 14px;
+    text-align  : right;
+    margin: 0% 2%;}
+
+/*-- NPC sheet ---*/
+div.sheet-panneau select {
+    min-height:28px; 
+    width     :35%;}
+
+div.sheet-autres div {
+    margin: 0.8% 0.5%;
+    width: 99%;}
+
+div.sheet-autres input[type="text"] {
+    width: 40%;}
+
+div.sheet-autres label {
+    width     : 16%;}
+
+div.sheet-autres select {
+    min-height:28px;
+    width     :56px; }
+
+/*--- GM sheet ----*/
+/* -----Informations row---- */
+div.sheet-info div {
+    margin: 0.8% 0.5%;
+    width: 99%;}
+
+div.sheet-info label {
+    margin-left : 5%;
+    width       : 20%;}
+
+div.sheet-info input[type="text"] {
+    width: 70%;}
+
+/* -----Valeurs row---- */
+div.sheet-val div:nth-of-type(2) {
+    margin-bottom: 1%;}
+
+div.sheet-val div:nth-of-type(2) label {
+    margin-left: 43%;
+    width      : 20%;}
+
+div.sheet-val div:nth-of-type(3) label:nth-of-type(1) {
+    margin-left: 15%;
+    width      : 30%;}
+
+div.sheet-val div:nth-of-type(3) label:nth-of-type(2) {
+    width: 15%;}
+
+/* -----Artéfacts row---- */
+div.sheet-art-head {
+    text-align: left;}
+
+div.sheet-art-head span:nth-of-type(1) {
+    margin-left: 14%;
+    margin-right: 40%;}
+
+div.sheet-art-head span:nth-of-type(2) {
+    margin-right: 26%;}
+
+div.sheet-art div {
+    display    : inline-block;
+    margin     : 0% 1%;
+    white-space: nowrap;
+    width      : 99%;}
+
+div.sheet-art input[type="text"] {
+    margin    : 0.5%;
+    text-align: center;
+    width     : 30%;}
+
+div.sheet-art input[type="text"]:nth-of-type(2) {
+    text-align: left;
+    width     : 64%;}
+
+/* -----Souffles / Éveils row---- */
+div.sheet-sou div.sheet-thead {
+    text-align: left;}
+
+div.sheet-sou div.sheet-sou-row {
+    display: inline-block;
+    width: 100%;
+}
+
+div.sheet-sou div.sheet-sou-row div {
+    display: inline-block;
+}
+
+div.sheet-sou div.sheet-sou-row div:nth-of-type(1) {
+    width: 40%;
+}
+
+div.sheet-sou div.sheet-sou-row div:nth-of-type(2) {
+    width: 58%;
+}
+
+div.sheet-sou span:nth-of-type(1) {
+    margin-left : 13%;
+    margin-right: 35%;
+}
+
+div.sheet-sou label {
+    margin-left: 40%;
+    width      : auto;}
 
 /* ---------------Weapon Mastery------------------------------------ */
 input.sheet-radioChoice {
@@ -123,18 +266,11 @@ input.sheet-radioChoice6:checked + span.sheet-radioChoice6 {
 }
 
 /* ---------------Page cachée------------------------------------ */
+input.sheet-showDiv {
+    position: absolute;}
 
-.sheet-showDiv {
-    display: none;
-}
-
-.sheet-showDiv:not(:checked) ~ div, fieldset {
-    display: none !important;
-}
-
-.sheet-showDiv:checked ~ div, fieldset  {
-    display: block;
-}
+.sheet-showDiv:checked ~ div.sheet-col div.sheet-row {
+    display: none;}
 
 /* -------------------------------------TEMPLATE ---------------------------------*/
 .sheet-rolltemplate-base .sheet-container {
@@ -491,6 +627,7 @@ input.sheet-player:checked ~ .sheet-player-sheet{
 .charsheet {
     padding: 0px !important;
     margin: 0px !important;
+    width: 850px;
 }
 
 .charsheet input[type=text],
@@ -509,6 +646,12 @@ input.sheet-player:checked ~ .sheet-player-sheet{
 .charsheet input:focus,
 .charsheet textarea:focus {
     background: #fff;
+}
+
+.charsheet input[type="number"] {
+    text-align :center; 
+    font-size  : 16px; 
+    font-weight: bold;
 }
 
 .charsheet textarea {
@@ -728,6 +871,16 @@ th .sheet-help-content {
     text-align: center;
     vertical-align: top;
 }
+
+div.sheet-monstre-attribut div:first-child {
+    height:1px;
+    width :302px; }
+
+div.sheet-monstre-attribut input[type="number"] {
+    font-size  : 16px; 
+    font-weight: bold;
+    text-align :center; 
+    width      :25%; }
 
 .sheet-panneau {
     border: 5px solid #6E6E6E;
