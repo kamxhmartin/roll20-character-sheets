@@ -286,96 +286,107 @@
             <input type="checkbox" name="attr_AtefactS3" value="1"/>
         </div>
     </div>
-        <br/>
-        <div class="sheet-2colrow">
-            <div class="sheet-col">
-                <div class="his">
-                    <input type="checkbox" class="showDiv" name="attr_affDragNiv2" value="1">
-                    <div class="thead">
-                        <span class="tcell" style="width:150px; text-align:center;">Souffles</span>
-                        <span class="tcell" style="width:250px; text-align:center;">Effets</span>
-                    </div>
-                    <div class="trow">
-                        <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Souffle1"/><br> Utilisation : <input type="checkbox" name="attr_SouffleU1" value="1"/></span>
-                        <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_SouffleS1"></textarea></span>
-                    </div>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv3" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Souffle2"/><br> Utilisation : <input type="checkbox" name="attr_SouffleU2" value="1"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_SouffleS2"></textarea></span>
-                                </div>
-                    </span>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv4" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Souffle3"/><br> Utilisation : <input type="checkbox" name="attr_SouffleU3" value="1"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_SouffleS3"></textarea></span>
-                                </div>
-                    </span>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv5" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:120px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Souffle4"/><br> Utilisation : <input type="checkbox" name="attr_SouffleU4" value="1"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_SouffleS4"></textarea></span>
-                                </div>
-                    </span>
+    <div class="sheet-2colrow sou">
+        <input type="checkbox" class="showDiv" name="attr_affDragNiv2" value="1" checked>
+        <div class="sheet-col">
+            <div class="thead">
+                <span data-i18n="souffles">Souffles</span>
+                <span data-i18n="effets">Effets</span>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Souffle1"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_SouffleU1" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_SouffleS1"></textarea>
                 </div>
             </div>
-            <div class="sheet-col">
-                <div class="ttable">
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv2" value="1">
-                                <div class="thead">
-                                    <span class="tcell" style="width:150px; text-align:center;">Éveils</span>
-                                    <span class="tcell" style="width:250px; text-align:center;">Effets</span>
-                                </div>
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Eveil1"/><br>Coût : <input type="number" style="max-height:18px; text-align:center; font-size: 14px; font-weight: bold;" name="attr_EveilS1" value="0" min="0"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_EveilE1"></textarea></span>
-                                </div>
-                    </span>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv3" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Eveil2"/><br>Coût : <input type="number" style="max-height:18px; text-align:center; font-size: 14px; font-weight: bold;" name="attr_EveilS2" value="0" min="0"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_EveilE2"></textarea></span>
-                                </div>
-                    </span>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv4" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Eveil3"/><br>Coût : <input type="number" style="max-height:18px; text-align:center; font-size: 14px; font-weight: bold;" name="attr_EveilS3" value="0" min="0"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_EveilE3"></textarea></span>
-                                </div>
-                    </span>
-                    <span>
-                        <input type="checkbox" class="showDiv" name="attr_affDragNiv5" value="1">
-                                <div class="trow">
-                                    <span class="tcell" style="width:150px; text-align:right;"><input style="text-align:center;" type="text" name="attr_Eveil4"/><br>Coût : <input type="number" style="max-height:18px; text-align:center; font-size: 14px; font-weight: bold;" name="attr_EveilS4" value="0" min="0"/></span>
-                                    <span class="tcell" style="width:250px;"><textarea rows="2" name="attr_EveilE4"></textarea></span>
-                                </div>
-                    </span>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Souffle2"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_SouffleU2" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_SouffleS2"></textarea>
+                </div>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Souffle3"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_SouffleU3" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_SouffleS3"></textarea>
+                </div>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Souffle4"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_SouffleU4" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_SouffleS4"></textarea>
                 </div>
             </div>
         </div>
-        <div class="thead">Historique</div>
-            <div class="ttable">
-                <div class="thead">
-                    <span class="tcell" style="width:215px; text-align:center;">Scénarios</span>
-                    <span class="tcell" style="width:100px; text-align:center;">Dates</span>
-                    <span class="tcell" style="width:500px; text-align:center;">Voyageurs</span>
+        <div class="sheet-col">
+            <div class="thead">
+                <span data-i18n="eveils">Éveils</span>
+                <span data-i18n="effets">Effets</span>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Eveil1"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_EveilU1" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_EveilS1"></textarea>
                 </div>
             </div>
-            <fieldset class="repeating_historique">
-                <div class="ttable">
-                    <div class="trow">
-                        <span class="tcell" style="width:200px;"><input style="text-align:center;" type="text" name="attr_Scenario"/></span>
-                        <span class="tcell" style="width:100px;"><input style="text-align:center;" type="text" name="attr_Date"/></span>
-                        <span class="tcell" style="width:500px;"><input style="text-align:center;" type="text" name="attr_Voyageur"/></span>
-                    </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Eveil2"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_EveilU2" value="1"/>
                 </div>
-            </fieldset>
+                <div>
+                    <textarea name="attr_EveilS2"></textarea>
+                </div>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Eveil3"/>
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_EveilU3" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_EveilS3"></textarea>
+                </div>
+            </div>
+            <div class="sou-row">
+                <div>
+                    <input type="text" name="attr_Eveil4"/><br> 
+                    <label data-i18n="utilisation-c">Utilisation :</label><input type="checkbox" name="attr_EveilU4" value="1"/>
+                </div>
+                <div>
+                    <textarea name="attr_EveilS4"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="thead" data-i18n="historique">Historique</div>
+    <div class="hist">
+        <div class="thead">
+            <span data-i18n="scenarios">Scénarios</span>
+            <span data-i18n="dates">Dates</span>
+            <span data-i18n="voyegeurs">Voyageurs</span>
+        </div>
+        <fieldset class="repeating_historique">
+            <div>
+                <input type="text" name="attr_Scenario"/>
+                <input type="text" name="attr_Date"/>
+                <input type="text" name="attr_Voyageur"/>
+            </div>
+        </fieldset>
     </div>
 </div>
 
