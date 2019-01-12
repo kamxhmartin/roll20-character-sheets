@@ -122,21 +122,73 @@ div.sheet-weaponhead div:nth-of-type(8) {
 
 /* ===== DIV NO TABLE ===== */
 
-div.sheet-tab-npc-sheet label,
+div.sheet-saison label,
+div.sheet-etats label,
+div.sheet-tab-npc-sheet div.sheet-autres label,
 div.sheet-tab-gm-sheet label {
     display   : inline-block;
     font-size : 14px;
     text-align  : right;
     margin: 0% 2%;}
 
-/*-- NPC sheet ---*/
-div.sheet-panneau select {
-    min-height:28px; 
-    width     :35%;}
-
-div.sheet-autres div {
+div.sheet-autres div,
+div.sheet-info div,
+div.sheet-etats div {
     margin: 0.8% 0.5%;
     width: 99%;}
+
+/*-- PC sheet ---*/
+div.sheet-tab-character-sheet div.sheet-4colrow input[type="number"] {
+    margin-right: 2%;}
+
+div.sheet-tab-character-sheet div.sheet-4colrow select {
+    min-height: 28px;
+    width:40%;}
+
+div.sheet-encom input[type="number"]{
+    width: 28%;}
+
+div.sheet-label-middle {
+    color: black;
+    text-align: left;
+    font-size: 10px;
+    font-weight: normal;
+    display: inline-block;
+    width: 160px;
+    padding: 0px;}
+
+div.sheet-label-middle span:nth-of-type(1) {
+    margin-left: 2%;
+    margin-right: 8%;}
+
+div.sheet-label-middle span:nth-of-type(2) {
+    margin-right: 7%;}
+
+/* ----- États row---- */
+div.sheet-etats label { 
+    margin: 0% 1%;
+    width: 15%}
+
+div.sheet-etats label:nth-of-type(2) {
+    margin-left: 0%;
+    width: 21%}
+
+/* ----- Saison row---- */
+div.sheet-saison div:nth-of-type(2) {
+    margin-bottom: 1%;}
+
+div.sheet-saison label {
+    width: 15%;}
+
+div.sheet-saison select {
+    margin: 0% -1%;
+    min-height:28px;
+    width     :30%; }
+
+/*-- NPC sheet ---*/
+div.sheet-panneau select {
+    min-height:28px;
+    width     :35%;}
 
 div.sheet-autres input[type="text"] {
     width: 40%;}
@@ -150,10 +202,6 @@ div.sheet-autres select {
 
 /*--- GM sheet ----*/
 /* -----Informations row---- */
-div.sheet-info div {
-    margin: 0.8% 0.5%;
-    width: 99%;}
-
 div.sheet-info label {
     margin-left : 5%;
     width       : 20%;}
@@ -378,25 +426,26 @@ input.sheet-showDiv {
 /* -------- Fenetre à l'affiche de souris-----*/
 
 /* -------- Centrer vers la droite-----*/
-div.sheet-tooltipsdown {
+div.sheet-tooltipsdown,
+div.sheet-tooltipsdownMid {
   position: relative;
   display: inline;
 }
 
-div.sheet-tooltipsdown span {
-  position: absolute;
-  width:270px;
-  color: #fff;
-  background: #6E6E6E;
-  height: 33px;
-  line-height: 30px;
-  text-align: center;
-  visibility: hidden;
-  border-radius: 6px;
-  border:3px solid black;
+div.sheet-tooltipsdown div,
+div.sheet-tooltipsdownMid div {
+    background   : #6E6E6E;
+    border       :3px solid black;
+    border-radius: 6px;
+    color        : #fff;
+    line-height  : 30px;
+    position     : absolute;
+    text-align   : center;
+    visibility   : hidden;
 }
 
-div:hover.sheet-tooltipsdown span {
+div:hover.sheet-tooltipsdown div,
+div:hover.sheet-tooltipsdownMid div  {
   visibility: visible;
   opacity: 1;
   left: 0%;
@@ -406,35 +455,18 @@ div:hover.sheet-tooltipsdown span {
   z-index: 999;
 }
 
-
-/* -------- Centrer au milieu -----*/
-
-div.sheet-tooltipsdownMid {
-  position: relative;
-  display: inline;
+div.sheet-tooltipsdown div {
+  width:270px;
+  height: 33px;
 }
 
-div.sheet-tooltipsdownMid span {
-  position: absolute;
+div.sheet-tooltipsdownMid div {
   width:250px;
-  color: #fff;
-  background: #6E6E6E;
-  height: 35px;
-  line-height: 30px;
-  text-align: center;
-  visibility: hidden;
-  border-radius: 6px;
-  border:3px solid black;
-}
+  height: 35px;}
 
-div:hover.sheet-tooltipsdownMid span {
-  visibility: visible;
-  opacity: 1;
-  left: 0%;
-  top: 50%;
-  margin-top: -15px;
-  margin-left: -150px;
-  z-index: 999;
+div.sheet-tooltipsdown span,
+div.sheet-tooltipsdownMid span {
+    margin-right: 2%;
 }
 
 
@@ -754,22 +786,9 @@ label.sheet-label-casegauche{
     padding: 0px;
 }
 
-
-label.sheet-label-middle {
-    color: black;
-    text-align: left;
-    font-size: 10px;
-    font-weight: normal;
-    display: inline-block;
-    width: 160px;
-    padding: 0px;
-}
-
 label.sheet-label-casegauche {
     padding-left: 25px; /*16px*/
 }
-
-
 
 
 /* TIP HELP */
@@ -914,14 +933,16 @@ div.sheet-monstre-attribut input[type="number"] {
     margin: 20px 5px 2px 0
 }
 
-.sheet-pj-attribut label {
-    color: #fff;
-    text-align: center
-}
+div.sheet-pj-attribut input[type="number"] {
+    width:50%;}
 
-.sheet-monstre-attribut label {
+div.sheet-pj-attribut div.sheet-haut input[type="number"] {
+    width:25%;}
+
+.sheet-pj-attribut label,
+.sheet-monstre-attribut label{
     color: #fff;
-    text-align: center
+    text-align: center;
 }
 
 .sheet-Panneau-label {

@@ -161,7 +161,7 @@
                     <button class="sheet-btn" type="roll" value="&{template:base} {{Test=Test de Vigueur}} {{Perso=@{character_name}}} {{die1=[[1d@{VIGM}]]}} {{die2=[[?{2e Attribut ?|VIG, 1d@{VIGM}|AGI, 1d@{AGIM} | INT, 1d@{INTM} | ESP, 1d@{ESPM}}]]}} {{Mod=[[0]]}}"></button>
                 </div>
                 <div class="sheet-droite">
-                    <label data-i18n="agilite">Agilité</label>
+                    <label data-i18n="agilite">Agilite</label><!-- "Agilité"" brise le code -->
                     <input name="attr_AGIM" type="number" step="2" min="4" max="12" value="4" /> 
                     <button class="sheet-btn" type="roll" value="&{template:base} {{Test=Test d'Agilité}} {{Perso=@{character_name}}} {{die1=[[1d@{AGIM}]]}} {{die2=[[?{2e Attribut ?|VIG, 1d@{VIGM}|AGI, 1d@{AGIM} | INT, 1d@{INTM} | ESP, 1d@{ESPM}}]]}} {{Mod=[[0]]}}"></button>
                 </div>
@@ -394,163 +394,164 @@
     <div class="sheet-4colrow">
         <div class="sheet-col">
             <div class="sheet-panneau">
-                <span class="thead">Pts de Vie</span>
-                    <input name="attr_PV" type="number" min="0" value="0" />&nbsp;
-                    <div class="sheet-tooltipsdown"><input name="attr_PVmax" type="number" value="(@{VIG} * 2) + @{ModPV} + @{PVNIV2} + @{PVNIV3} + @{PVNIV4} + @{PVNIV5} + @{PVNIV6} + @{PVNIV7} + @{PVNIV8} + @{PVNIV9} + @{PVNIV10} + @{TypePVMod}" disabled /><br />
-                        <span><div>
-	                        Mod. Points de vie Max :
-                            <input type="number" name="attr_ModPV" value="0"/>
-	                    </div></span>
-                    </div>
+                <span class="thead" data-i18n="ptsdevie">Pts de Vie</span>
+                <input name="attr_PV" type="number" min="0" value="0" />
+                <div class="sheet-tooltipsdown">
+                    <input name="attr_PVmax" type="number" value="(@{VIG} * 2) + @{ModPV} + @{PVNIV2} + @{PVNIV3} + @{PVNIV4} + @{PVNIV5} + @{PVNIV6} + @{PVNIV7} + @{PVNIV8} + @{PVNIV9} + @{PVNIV10} + @{TypePVMod}" disabled />
+                    <div><span data-i18n="modpointsdeviemax">Mod. Points de vie Max :</span><input type="number" name="attr_ModPV" value="0"/></div>
+                </div>
+                <br />
                 <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
                 <label class="sheet-label-casegauche" data-i18n="max-p">Max.</label>
             </div>
             <div class="sheet-panneau">
-                <span class="thead">Maladresse</span>
-                    <input type="number" name="attr_Maladresse" value="0" />
+                <span class="thead" data-i18n="maldresse">Maladresse</span>
+                <input type="number" name="attr_Maladresse" value="0" />
             </div>
         </div>
         <div class="sheet-col">
             <div class="sheet-panneau">
-                <span class="thead">Pts d'Énergie</span>
-                    <input name="attr_PE" type="number" min="0" value="0" />&nbsp;
-                    <div class="sheet-tooltipsdownMid"><input name="attr_PEmax" type="number" value="(@{ESP} * 2) + @{ModPE}  + @{PENIV2} + @{PENIV3} + @{PENIV4} + @{PENIV5} + @{PENIV6} + @{PENIV7} + @{PENIV8} + @{PENIV9} + @{PENIV10} + @{TypePEMod}" disabled /><br />
-                        <span><div>
-	                        Mod. Points d'Énergie Max :
-                            <input type="number" name="attr_ModPE" value="0"/>
-	                    </div></span>
-                    </div>
+                <span class="thead" data-i18n="ptsdenergie">Pts d'Énergie</span>
+                <input name="attr_PE" type="number" min="0" value="0" />
+                <div class="sheet-tooltipsdownMid">
+                    <input name="attr_PEmax" type="number" value="(@{ESP} * 2) + @{ModPE}  + @{PENIV2} + @{PENIV3} + @{PENIV4} + @{PENIV5} + @{PENIV6} + @{PENIV7} + @{PENIV8} + @{PENIV9} + @{PENIV10} + @{TypePEMod}" disabled /><br />
+                    <div><span data-i18n="modpointsenergiemax">Mod. Points d'Énergie Max :</span><input type="number" name="attr_ModPE" value="0"/></div>
+                </div>
                 <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
                 <label class="sheet-label-casegauche" data-i18n="max-p">Max.</label>
             </div>
-            <div class="sheet-panneau">
-                <span class="thead" title="VIG + 3">Encombrement</span>
-                <input style="width:28%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_EncombAttirail2" value="@{armeEncTotal} + @{armureEncTotal}" type="number" disabled/>&nbsp;
-                    <div class="sheet-tooltipsdownMid"><input style="width:28%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_encumbrancemax" value="@{EncombMax}" type="number" disabled/>&nbsp;
-                        <span><div>
-	                        Mod. Encombrement :
-                            <input type="number" name="attr_EncomMod" value="0"/>
-	                    </div></span>
+            <div class="sheet-panneau encom">
+                <span class="thead" title="VIG + 3" data-i18n="encombrement">Encombrement</span>
+                <input name="attr_EncombAttirail2" value="@{armeEncTotal} + @{armureEncTotal}" type="number" disabled/>
+                <div class="sheet-tooltipsdownMid">
+                    <input name="attr_encumbrancemax" value="@{EncombMax}" type="number" disabled/>
+                    <div>
+                        <span data-i18n="modencombrement">Mod. Encombrement :</span>
+                        <input type="number" name="attr_EncomMod" value="0"/>
                     </div>
-                    <input style="width:28%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_encumbrance2" value="@{Encomb}" type="number" disabled/><br>
-                <label class="sheet-label-middle">&nbsp;Att.Guerre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Limite&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Équipement</label>
+                </div>
+                <input name="attr_encumbrance2" value="@{Encomb}" type="number" disabled/>
+                <div class="sheet-label-middle">
+                    <span data-i18n="attguerre">Att.Guerre</span>
+                    <span data-i18n="limite">Limite</span>
+                    <span data-i18n="equipement">Équipement</span>
+                </div>
             </div>
         </div>
         <div class="sheet-col">
             <div class="sheet-panneau">
-                <span class="thead">Condition</span>
-                    <input name="attr_condition" type="number" min="0" max="20" value="0" />&nbsp;
-                    <select style="min-height:28px;width:40%;" name="attr_bonus">
-                        <option value="0">-</option>
-                        <option value="VIG">VIG</option>
-                        <option value="AGI">AGI</option>
-                        <option value="INT">INT</option>
-                        <option value="ESP">ESP</option>
-                    </select><br/>
-                <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
-                <label class="sheet-label-casegauche" title="Si votre Condition est supérieure ou égale à 10, gagnez un bonus dans l'Attribut sélectionné">&nbsp;Bonus</label>
+                <span class="thead" data-i18n="condition">Condition</span>
+                <input name="attr_condition" type="number" min="0" max="20" value="0" />
+                <select name="attr_bonus">
+                    <option value="0">-</option>
+                    <option value="VIG" data-i18n="vig">VIG</option>
+                    <option value="AGI" data-i18n="agi">AGI</option>
+                    <option value="INT" data-i18n="int">INT</option>
+                    <option value="ESP" data-i18n="esp">ESP</option>
+                </select>
+                <div>
+                    <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
+                    <label class="sheet-label-casegauche" title="Si votre Condition est supérieure ou égale à 10, gagnez un bonus dans l'Attribut sélectionné" data-i18n="bonus">Bonus</label>
+                </div>
             </div>
             <div class="sheet-panneau">
                 <span class="thead" title="Niveau 2 = 100xp
-Niveau 3 = 600xp
-Niveau 4 = 1 200xp
-Niveau 5 = 2 000xp
-Niveau 6 = 3 000xp
-Niveau 7 = 4 200xp
-Niveau 8 = 5 800xp
-Niveau 9 = 7 500xp
-Niveau 10 = 10 000xp">Niveau</span>
-                    <input name="attr_XPtotal" value="0" type="number"/>&nbsp;
-                    <input type="number" name="attr_NiveauT" value="@{Niveau}" disabled/><br/>
-                <label class="sheet-label-casedroite">Total</label>
-                <label class="sheet-label-casegauche">Niveau</label>
+                    Niveau 3 = 600xp
+                    Niveau 4 = 1 200xp
+                    Niveau 5 = 2 000xp
+                    Niveau 6 = 3 000xp
+                    Niveau 7 = 4 200xp
+                    Niveau 8 = 5 800xp
+                    Niveau 9 = 7 500xp
+                    Niveau 10 = 10 000xp" data-i18n="nivaeu">Niveau
+                </span>
+                <input name="attr_XPtotal" value="0" type="number"/>
+                <input type="number" name="attr_NiveauT" value="@{Niveau}" disabled/>
+                <br />
+                <label class="sheet-label-casedroite" data-i18n="total">Total</label>
+                <label class="sheet-label-casegauche" data-i18n="nivaeu">Niveau</label>
             </div>
         </div>
         <div class="sheet-col">
-            <div rowspan="2" class="sheet-pj-attribut">
-                <div style="width:302px; height:1px;"></div>
-                <label class="sheet-Panneau-label">Attributs</label>
+            <div class="sheet-pj-attribut">
+                <label class="sheet-Panneau-label" data-i18n="attributs">Attributs</label>
                 <div class="sheet-haut">
-                    <label>Vigueur</label>
-                    <input style="width:25%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_VIG2" type="number" value="@{VIGT}" disabled/>
+                    <label data-i18n="vigueur">Vigueur</label>
+                    <input name="attr_VIG2" type="number" value="@{VIGT}" disabled />
                 </div>
                 <div class="sheet-droite">
-                    <label>Agilité</label>
-                    <input style="width:50%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_AGI2" type="number" value="@{AGIT}" disabled/> 
+                    <label data-i18n="agilite">Agilite</label><!-- "é"" brise le code -->
+                    <input name="attr_AGI2" type="number" value="@{AGIT}" disabled /> 
                 </div>
                 <div class="sheet-bas">
-                    <label>Intelligence</label>
-                    <input style="width:50%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_INT2" type="number" value="@{INTT}" disabled/> 
+                    <label data-i18n="intelligence">Intelligence</label>
+                    <input name="attr_INT2" type="number" value="@{INTT}" disabled /> 
                 </div>
                 <div class="sheet-gauche">
-                    <label>Esprit</label>
-                    <input style="width:50%; text-align:center; font-size: 16px; font-weight: bold;" name="attr_ESP2" type="number" value="@{ESPT}" disabled/>
+                    <label data-i18n="esprit">Esprit</label>
+                    <input name="attr_ESP2" type="number" value="@{ESPT}" disabled />
                 </div>
             </div>
         </div>
     </div>
     <br>
     <div class="sheet-2colrow">
-        <div class="sheet-col">
-            <div class="thead">États</div>
-            <div class="ttable">
-                <div class="ligne">
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés d'AGI">Blessé :&nbsp;&nbsp;<input type="number" name="attr_Blesse" value="0" min="0"/></div>
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés de VIG">Empoisoné :&nbsp;&nbsp;<input type="number" name="attr_Poison" value="0" min="0"/></div>
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés d'AGI et de VIG">Malade :&nbsp;&nbsp;<input type="number" name="attr_Malade" value="0" min="0"/></div>
-                </div>
-                <div class="ligne">
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés d'ESP">Las :&nbsp;&nbsp;<input type="number" name="attr_Las" value="0" min="0"/></div>
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés d'INT">Surexité :&nbsp;&nbsp;<input type="number" name="attr_Surex" value="0" min="0"/></div>
-                    <div class="tcell" style="width:120px; text-align:right;" title="Réduit vos dés d'ESP et d'INT">Choqué :&nbsp;&nbsp;<input type="number" name="attr_Choc" value="0" min="0"/></div>
-                </div>
+        <div class="sheet-col etats">
+            <div class="thead" data-i18n="etats">États</div>
+            <div><!-- "é"" brise le code -->
+                <label title="Réduit vos dés d'AGI" data-i18n="blesse-c">Blessé :</label><input type="number" name="attr_Blesse" value="0" min="0"/>
+                <label title="Réduit vos dés de VIG" data-i18n="empoisone-c">Empoisone :</label><input type="number" name="attr_Poison" value="0" min="0"/>
+                <label title="Réduit vos dés d'AGI et de VIG" data-i18n="malade-c">Malade :</label><input type="number" name="attr_Malade" value="0" min="0"/>
+            </div>
+            <div>
+                <label title="Réduit vos dés d'ESP" data-i18n="las-c">Las :</label><input type="number" name="attr_Las" value="0" min="0"/>
+                <label title="Réduit vos dés d'INT" data-i18n="sureite-c">Surexite :</label><input type="number" name="attr_Surex" value="0" min="0"/>
+                <label title="Réduit vos dés d'ESP et d'INT" data-i18n="choque-c">Choque :</label><input type="number" name="attr_Choc" value="0" min="0"/>
             </div>
         </div>
-        <div class="sheet-col">
-            <div class="thead">Modificateurs actuels</div>
-            <div class="ttable">
-                <div class="ligne">
-                    <div class="tcell" style="width:100px; text-align:right;">Saison :&nbsp;&nbsp;<select style="width:110px; min-height:28px;" name='attr_currentSeason'>
-                                <option value="0">-</option>
-                                <option value="Spring">Pringtemps</option>
-                                <option value="Summer">Été</option>
-                                <option value="Autumn">Automne</option>
-                                <option value="Winter">Hiver</option>
-                            </select>
-                    </div>
-                    <div class="tcell" style="width:100px; text-align:right;">Terrain :&nbsp;&nbsp;<select style="width:110px; min-height:28px;" name="attr_terrain">
-                                <option value="0">-</option>
-                                <option value="@{ModPlaine}">Plaine</option>
-                                <option value="@{ModLande}">Lande</option>
-                                <option value="@{ModBois}">Bois</option>
-                                <option value="@{ModColline}">Collines</option>
-                                <option value="@{ModRocaille}">Rocaille</option>
-                                <option value="@{ModForet}">Forêt</option>
-                                <option value="@{ModMarais}">Marais</option>
-                                <option value="@{ModMontagne}">Montagne</option>
-                                <option value="@{ModDesert}">Désert</option>
-                                <option value="@{ModJungle}">Jungle</option>
-                                <option value="@{ModHM}">H.Montagne</option>
-                            </select>
-                    </div>
-                </div>
-                <div class="ligne">
-                    <div class="tcell" style="width:100px; text-align:right;">Climat :&nbsp;&nbsp;<select style="width:110px; min-height:28px;" name="attr_weather">
-                                <option value="0">-</option>
-                                <option value="@{ModPluie}">Pluie</option>
-                                <option value="@{ModVF}">Vent Fort</option>
-                                <option value="@{ModBrume}">Brume</option>
-                                <option value="@{ModChaleur}">Chaleur</option>
-                                <option value="@{ModFroid}">Froid</option>
-                                <option value="@{ModOrage}">Orage</option>
-                                <option value="@{ModNeige}">Neige</option>
-                                <option value="@{ModBrouillard}">Brouillard</option>
-                                <option value="@{ModTenebres}">Ténèbres</option>
-                                <option value="@{ModTempete}">Tempête</option>
-                                <option value="@{ModBlizzard}">Blizzard</option>
-                            </select>
-                    </div>
-                </div>
+        <div class="sheet-col saison">
+            <div class="thead" data-i18n="modificateursactuels">Modificateurs actuels</div>
+            <div>
+                <label data-i18n="saison-c">Saison :</label>
+                <select name='attr_currentSeason'>
+                    <option value="0">-</option>
+                    <option value="Spring" data-i18n="pringtemps">Pringtemps</option>
+                    <option value="Summer" data-i18n="ete">Éte</option>
+                    <option value="Autumn" data-i18n="automne">Automne</option>
+                    <option value="Winter" data-i18n="hiver">Hiver</option>
+                </select>
+                <label data-i18n="terrain-c">Terrain :</label>
+                <select name="attr_terrain">
+                    <option value="0">-</option>
+                    <option value="@{ModPlaine}" data-i18n="plaine">Plaine</option>
+                    <option value="@{ModLande}" data-i18n="lande">Lande</option>
+                    <option value="@{ModBois}" data-i18n="bois">Bois</option>
+                    <option value="@{ModColline}" data-i18n="collines">Collines</option>
+                    <option value="@{ModRocaille}" data-i18n="rocaille">Rocaille</option>
+                    <option value="@{ModForet}" data-i18n="foret">Forêt</option>
+                    <option value="@{ModMarais}" data-i18n="marais">Marais</option>
+                    <option value="@{ModMontagne}" data-i18n="montage">Montagne</option>
+                    <option value="@{ModDesert}" data-i18n="desert">Désert</option>
+                    <option value="@{ModJungle}" data-i18n="jungle">Jungle</option>
+                    <option value="@{ModHM}" data-i18n="hmontange">H.Montagne</option>
+                </select>
+            </div>
+            <div>
+                <label>Climat :</label>
+                <select name="attr_weather">
+                    <option value="0">-</option>
+                    <option value="@{ModPluie}">Pluie</option>
+                    <option value="@{ModVF}">Vent Fort</option>
+                    <option value="@{ModBrume}">Brume</option>
+                    <option value="@{ModChaleur}">Chaleur</option>
+                    <option value="@{ModFroid}">Froid</option>
+                    <option value="@{ModOrage}">Orage</option>
+                    <option value="@{ModNeige}">Neige</option>
+                    <option value="@{ModBrouillard}">Brouillard</option>
+                    <option value="@{ModTenebres}">Ténèbres</option>
+                    <option value="@{ModTempete}">Tempête</option>
+                    <option value="@{ModBlizzard}">Blizzard</option>
+                </select>
             </div>
         </div>
     </div>
