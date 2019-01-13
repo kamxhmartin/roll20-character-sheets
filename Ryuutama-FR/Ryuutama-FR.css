@@ -1,9 +1,4 @@
 
-
-.sheet-clear {
-    clear: both
-}
-
 .sheet-divider {
     border-top: 1px solid #e3e3e3
 }
@@ -25,14 +20,6 @@ input[type="number"] {
 /*----------------------------------- */
 
 /* ===== DIV AS TABLE ===== */
-
-
-.sheet-ttable {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-    border: none;
-}
 
 .sheet-panneau {
     display: table;
@@ -92,36 +79,9 @@ div.sheet-weaponhead div:nth-of-type(7) {
 div.sheet-weaponhead div:nth-of-type(8) {
     margin-left: 1%;}
 
-
-.sheet-ligne {
-    display: table-row;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    margin: 1px;
-    white-space: nowrap;
-}
-.sheet-tcell {
-    display         : table-cell;
-    text-align      : right;
-    vertical-align  : middle;
-    font-weight     : bold;
-    background-color: transparent;
-    border          : none;
-    padding         : 1px 1px 1px 1px;
-}
-
-.sheet-tcell2{
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-    background-color: transparent;
-    border: none;
-    padding: 1px 1px 1px 1px;
-}
-
 /* ===== DIV NO TABLE ===== */
-
+div.sheet-perso-info label,
+div.sheet-desc label,
 div.sheet-saison label,
 div.sheet-etats label,
 div.sheet-tab-npc-sheet div.sheet-autres label,
@@ -166,8 +126,8 @@ div.sheet-label-middle span:nth-of-type(2) {
 
 /* ----- États row---- */
 div.sheet-etats label { 
-    margin: 0% 1%;
-    width: 15%}
+    margin: 0% 0.5%;
+    width: 16%}
 
 div.sheet-etats label:nth-of-type(2) {
     margin-left: 0%;
@@ -184,6 +144,32 @@ div.sheet-saison select {
     margin: 0% -1%;
     min-height:28px;
     width     :30%; }
+
+/* ----- Personnage row---- */
+div.sheet-character-tabs {
+    margin-bottom: 5px;}
+
+div.sheet-perso-info label {
+    width: 34%;}
+
+div.sheet-perso-info input[type="text"],
+div.sheet-perso-info select  {
+    width: 60%;}
+
+div.sheet-perso-info input.sheet-short {
+    width: 20%;}
+
+/* ----- Description row---- */
+
+div.sheet-desc label {
+    width: 12%;}
+
+div.sheet-desc input[type="text"] {
+    width: 30%;}
+
+div.sheet-desc div:nth-of-type(1n+3) label {
+    text-align: center;
+    width: 100%;}
 
 /*-- NPC sheet ---*/
 div.sheet-panneau select {
@@ -311,7 +297,7 @@ input.sheet-radioChoice {
 	z-index: 9999;
 }
 
-span.sheet-radioChoice {
+input.sheet-radioChoice  + span {
     text-align: center;
     display: inline-block; 	
 	background: #BDBDBD;
@@ -323,14 +309,10 @@ span.sheet-radioChoice {
 	margin-left: -100px;
     font-weight: bold;
     margin-bottom: 5px;
+    width:127px;
 }
 
-input.sheet-radioChoice1:checked + span.sheet-radioChoice1,
-input.sheet-radioChoice2:checked + span.sheet-radioChoice2,
-input.sheet-radioChoice3:checked + span.sheet-radioChoice3,
-input.sheet-radioChoice4:checked + span.sheet-radioChoice4,
-input.sheet-radioChoice5:checked + span.sheet-radioChoice5,
-input.sheet-radioChoice6:checked + span.sheet-radioChoice6 {
+input.sheet-radioChoice:checked + span {
     background: #6E6E6E;
     border-radius: 4px;
 }
@@ -339,7 +321,8 @@ input.sheet-radioChoice6:checked + span.sheet-radioChoice6 {
 input.sheet-showDiv {
     position: absolute;}
 
-.sheet-showDiv:checked ~ div.sheet-col div.sheet-row {
+input.sheet-showDiv:checked ~ div.sheet-col div.sheet-row,
+input.sheet-showDiv:checked ~ div.sheet-arme-fav {
     display: none;}
 
 /* -------------------------------------TEMPLATE ---------------------------------*/
@@ -602,15 +585,13 @@ input.sheet-op:focus {
 /* START TAB CODE */
 
 input.sheet-tab-new {
-    cursor: pointer;
-    height: 20px;
-    opacity: 0;
+    cursor  : pointer;
+    height  : 20px;
+    opacity : 0;
     position: relative;
-    width: 120px;
-    z-index: 9999;
-}
+    z-index : 2;}
 
-span.sheet-tab-new {
+input.sheet-tab-new  + span {
     border: 1px solid #51597f;
     background-color: white;
     border-radius: 4px;
@@ -618,21 +599,28 @@ span.sheet-tab-new {
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
-    height: 20px;
-    margin-left: -122px;
+    padding: 2px 15px;
     position: relative;
-    text-align: center;
-    line-height: 20px;
-    width: 120px;
-}
+    text-align: center;}
 
 input.sheet-tab-new:checked + span {
     background: #51597f none repeat scroll 0 0;
-    border-radius: 4px;
-    font-weight: bold;
     color: white;
     /*color: #692927;*/
 }
+
+/* Sheet types */
+div.sheet-tabs input.sheet-tab-new:nth-of-type(1) {
+    margin-right: -13%;
+    width       : 13%;}
+
+div.sheet-tabs input.sheet-tab-new:nth-of-type(2) {
+    margin-right: -10%;
+    width       : 10%;}
+
+div.sheet-tabs input.sheet-tab-new:nth-of-type(3) {
+    margin-right: -15%;
+    width       : 15%;}
 
 /* END TAB CODE */
 
@@ -642,8 +630,7 @@ div.sheet-tab-content {
     margin-top: 2px;
     background-image: url('https://i.imgur.com/cLCuOaA.jpg'); /* Grey Background */
     background-position: center center;
-    background-repeat: repeat;
-}
+    background-repeat: repeat;}
 
 div.sheet-separator {
     border-top: 1px solid #444;
@@ -651,30 +638,37 @@ div.sheet-separator {
 }
 
 /* Top Level Tabs */
-input.sheet-tab-character-sheet:checked ~ div.sheet-tab-character-sheet,
-input.sheet-tab-npc-sheet:checked ~ div.sheet-tab-npc-sheet, /* NPC Short Sheet*/
-input.sheet-tab-gm-sheet:checked ~ div.sheet-tab-gm-sheet,
+div.sheet-tab-character-sheet,
+div.sheet-tab-npc-sheet, /* NPC Short Sheet*/
+div.sheet-tab-gm-sheet,
+div.sheet-tab-perso,
+div.sheet-tab-skills,
+div.sheet-tab-armes,
+div.sheet-tab-equipement,
+div.sheet-tab-animaux,
+div.sheet-tab-xp {
+    display: none;}
+
+input.sheet-player-sheet[value="personange"] ~ div.sheet-tab-character-sheet,
+input.sheet-player-sheet[value="monstre"] ~ div.sheet-tab-npc-sheet, /* NPC Short Sheet*/
+input.sheet-player-sheet[value="gm"] ~ div.sheet-tab-gm-sheet {
+    display: inline-block;}
 
 /* Character Sheet Tab SubTabs */
-input.sheet-tab-character:checked ~ div.sheet-tab-character,
-input.sheet-tab-skills:checked ~ div.sheet-tab-skills,
-input.sheet-tab-weapon:checked ~ div.sheet-tab-weapon,
-input.sheet-tab-item:checked ~ div.sheet-tab-item,
+input.sheet-character-tab[value="perso"] ~ div.sheet-tab-perso,
+input.sheet-character-tab[value="skills"] ~ div.sheet-tab-skills,
+input.sheet-character-tab[value="armes"] ~ div.sheet-tab-armes,
+input.sheet-character-tab[value="equipement"] ~ div.sheet-tab-equipment,
+input.sheet-character-tab[value="animaux"] ~ div.sheet-tab-animaux,
+input.sheet-character-tab[value="xp"] ~ div.sheet-tab-xp,
 input.sheet-tab-notes:checked ~ div.sheet-tab-notes,
 input.sheet-tab-animal1:checked ~ div.sheet-tab-animal1,
 input.sheet-tab-animal2:checked ~ div.sheet-tab-animal2,
 input.sheet-tab-animal3:checked ~ div.sheet-tab-animal3,
 input.sheet-tab-animal4:checked ~ div.sheet-tab-animal4,
-input.sheet-tab-animal5:checked ~ div.sheet-tab-animal5,
-input.sheet-tab-xp:checked ~ div.sheet-tab-xp
-{
+input.sheet-tab-animal5:checked ~ div.sheet-tab-animal5 {
     display: block;
 }
-
-input.sheet-player:checked ~ .sheet-player-sheet{
-    display: inline-block;
-}
-
 
 /* ------------------------------------ */
 
