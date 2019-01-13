@@ -100,7 +100,7 @@
         <div class="sheet-col">
             <div class="sheet-panneau">
                 <span class="thead" data-i18n="ptsdevie">Pts de Vie</span>
-                    <input name="attr_PV" type="number" min="-20" value="0" />&nbsp;
+                    <input name="attr_PV" type="number" min="-20" value="0" />;
                     <input name="attr_PVmax-monstre" type="number" value="0" /><br />
                 <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
                 <label class="sheet-label-casegauche" data-i18n="max-p">Max.</label>
@@ -114,7 +114,7 @@
         <div class="sheet-col">
             <div class="sheet-panneau">
                 <span class="thead" data-i18n="ptsdenergie">Pts d'Énergie</span>
-                    <input name="attr_PE" type="number" min="0" value="0" />&nbsp;
+                    <input name="attr_PE" type="number" min="0" value="0" />;
                     <input name="attr_PEmax-monstre" type="number" value="0"  /><br />
                 <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
                 <label class="sheet-label-casegauche" data-i18n="max-p">Max.</label>
@@ -141,7 +141,7 @@
         <div class="sheet-col">
             <div class="sheet-panneau">
                 <span class="thead" data-i18n="condition">Condition</span>
-                <input name="attr_condition" type="number" min="0" max="20" value="0" />&nbsp;
+                <input name="attr_condition" type="number" min="0" max="20" value="0" />;
                 <input name="attr_conditionmax" type="number" min="0" max="20" value="0" /><br/>
                 <label class="sheet-label-casedroite" data-i18n="actuel">Actuel</label>
                 <label class="sheet-label-casegauche" data-i18n="max-p">Max.</label>
@@ -240,7 +240,7 @@
             <div class="thead" data-i18n="valeurs">Valeurs</div>
             <div>
                 <label data-i18n="vitalite-c">Vitalité :</label>
-                <input value="0" min="0" max="10" name="attr_Vit" type="number" />&nbsp;/&nbsp;<input value="@{Vit5} + @{Vit10} + 3" name="attr_VitMax" type="number" disabled/>
+                <input value="0" min="0" max="10" name="attr_Vit" type="number" />;/;<input value="@{Vit5} + @{Vit10} + 3" name="attr_VitMax" type="number" disabled/>
             </div>
             <div>
                 <label data-i18n="sessionsjouees-c">Sessions jouées :</label>
@@ -708,10 +708,163 @@
                     <br/>
                     <i data-i18n="vousnepouvez">Vous ne pouvez pas choisir une arme d'escrime que vous avez déjà.</i>
                 </div>
+                <div class="thead" data-i18n="sortsmuscap">Sorts, Musiques et Capacites</div>
+                <div class="arme-fav talent">
+                     <fieldset class="repeating_talent">
+                        <div>
+                            <input class="tal-name" type="text" name="attr_nomsort"/>
+                            <label data-i18n="type-c">Type :</label> 
+                            <select name="attr_sortType">
+                                <option value=""></option>
+                                <option value="Musique" data-i18n="musique">Musique</option>
+                                <option value="Rituelle" data-i18n="rituelle">Rituelle</option>
+                                <option value="Saison (Pringtemps)" data-i18n="saisonpringtemps">Saison (Pringtemps)</option>
+                                <option value="Saison (Été)" data-i18n="saisonete">Saison (Ete)</option>
+                                <option value="Saison (Automne)" data-i18n="saisonautomne">Saison (Automne)</option>
+                                <option value="Saison (Hiver)" data-i18n="saisonhiver">Saison (Hiver)</option>
+                                <option value="Autre" data-i18n="autre">Autre</option> 
+                            </select> 
+                        </div>
+                        <div>
+                            <label data-i18n="portee-c">Portee :</label><input type="text" name="attr_portéesort"/>
+                            <label data-i18n="cible-c">Cible :</label><input type="text" name="attr_ciblesort"/>
+                        </div>
+                        <div>
+                            <label data-i18n="coute-c">Coût :</label><input type="text" name="attr_coutsort"/>
+                            <label data-i18n="duree-c">Duree :</label><input type="text" name="attr_dureesort"/>
+                        </div>
+                        <textarea placeholder="Effet" name="attr_effetsort"></textarea>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <h3 class="sheet-section-header" data-i18n="modifdet">Modificateurs de Terrains et de Climats</h3>
+        <div class="thead" data-i18n="terrain">Terrain</div>
+        <div class="terrain">
+            <div class="thead">
+                <span data-i18n="nivaeu-1">Niveau 1 (6)</span>
+                <span data-i18n="nivaeu-2">Niveau 2 (8)</span>
+                <span data-i18n="nivaeu-3">Niveau 3 (10)</span>
+                <span data-i18n="nivaeu-4">Niveau 4 (12)</span>
+                <span data-i18n="nivaeu-5">Niveau 5 (14)</span>
+            </div>
+            <div>
+                <label data-i18n="plains-c">Plaines :</label><input type="number" name="attr_grasslandMod" value="0" />
+                <label data-i18n="bois-c">Bois :</label><input type="number" name="attr_woodsMod" value="0" />
+                <label data-i18n="forets-c">Forêts :</label><input type="number" name="attr_deepForestMod" value="0" />
+                <label data-i18n="deserts-c">Déserts :</label><input type="number" name="attr_desertMod" value="0" />
+                <label data-i18n="hautesmon-c">Hautes montagnes :</label><input type="number" name="attr_alpineMod" value="0" />
+            </div>
+            <div>
+                <label data-i18n="landes-c">Landes :</label><input type="number" name="attr_wastelandMod" value="0" />
+                <label data-i18n="collines-c">Collines :</label><input type="number" name="attr_highlandsMod" value="0" />
+                <label data-i18n="marais-c">Marais :</label><input type="number" name="attr_swampMod" value="0" />
+                <label data-i18n="jungles-c">Jungles :</label><input type="number" name="attr_jungleMod" value="0" />
+            </div>
+            <div class="ter-last">
+                <label data-i18n="rocailles-c">Rocailles :</label><input type="number" name="attr_rockyTerrainMod" value="0" />
+                <label data-i18n="montagnes-c">Montagnes :</label><input type="number" name="attr_mountainMod" value="0" />
+            </div>
+        </div>
+        <div class="thead" data-i18n="climat">Climat</div>
+        <div class="climat">
+            <div class="thead">
+                <span data-i18n="niveau-1-p">Niveau 1 (+1)</span>
+                <span data-i18n="niveau-2-p">Niveau 2 (+2)</span>
+                <span data-i18n="niveau-3-p">Niveau 3 (+3)</span>
+            </div>
+            <div>
+                <label data-i18n="brume-c">Brume :</label><input type="number" name="attr_fogMod" value="0" />
+                <label data-i18n="chaleur-c">Chaleur :</label><input type="number" name="attr_hotMod" value="0" />
+                <label data-i18n="brouillard-c">Brouillard :</label><input type="number" name="attr_deepFogMod" value="0" />
+                <label data-i18n="neige-c">Neige :</label><input type="number" name="attr_snowMod" value="0" />
+                <label data-i18n="blizzard-c">Blizzard :</label><input type="number" name="attr_blizzardMod" value="0" />
+            </div>
+            <div>
+                <label data-i18n="froid-c">Froid :</label><input type="number" name="attr_coldMod" value="0" />
+                <label data-i18n="pluie-c">Pluie :</label><input type="number" name="attr_rainMod" value="0" />
+                <label data-i18n="orage-c">Orage :</label><input type="number" name="attr_hardRainMod" value="0" />
+                <label data-i18n="tenebres-c">Ténèbres :</label><input type="number" name="attr_darkMod" value="0" />
+                <label data-i18n="tempete-c">Tempête :</label><input type="number" name="attr_hurricaneMod" value="0" />
+            </div>
+            <div>
+                <label data-i18n="ventfort-c">Vent fort :</label><input type="number" name="attr_strongWindMod" value="0" />
             </div>
         </div>
     </div>
     <div class="tab-skills">
+        <h3 class="sheet-section-header" data-i18n="testscomun">Tests communs</h3>
+        <input value="?{Concentration|Non, 0|Oui, 1+@{ConcentrationMod}} [Concentration] + @{terrain} [Terrain] + @{weather} [Climat] + @{MalusEnc} [Encombrement]" name="attr_ModPaysage" type="hidden" />
+        <input value="@{terrain} [Terrain] + @{weather} [Climat] + @{MalusEnc} [Encombrement]" name="attr_ModPaysageSC" type="hidden" />
+        <input value="?{Concentration|Non, 0|Oui, 1+@{ConcentrationMod}} [Concentration] + @{MalusEnc} [Encombrement]" name="attr_ModAll" type="hidden" />
+        <div class="sheet-2colrow">
+            <div class="sheet-col">
+                <!--- Start Condition -->
+                <div class="skill-row">
+                    <div class="skill-head"><b>Condition</b></div>
+                    <div class="sheet-tips">
+                        <div class="sheet-help-def sheet-help">
+                            <div class="sheet-icon">
+                                <span class="sheet-icon-question">?</span>
+                            </div>
+                            <div class="sheet-help-content">
+                                <p>
+                                    Chaque matin, vous devez effectuer un test de Condition.
+                                </p>
+                                <p><b>Effet : </b> Le résultat du test détermine votre valeur de Condition pour la journée.</p>
+                                <p><b>Nuit blanche : </b>Si vous ne dormez pas durant la nuit, réduisez de moitié le résultat de votre test de Condition, arrondit à l'inférieur. </p>
+                                <p><b>Armure : </b>Si vous dormez en armure, ajoutez son Malus à votre test. </p>
+                                <p><b>Difficulté : </b> Aucune.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-stat">
+                        <!---:+:+: Vindikaell, remplacer au besoin data-i18n="" vig/esp/int/agi :+:+:+:--->
+                        (<span data-i18n="vig">VIG</span><span> + </span><span data-i18n="esp">ESP</span>)
+                    </div>
+                    <div class="skill-inputs">
+                        <span data-i18n="mod-c">Mod :</span>
+                        <input value="0" name="attr_Modbase-Condition" type="number" />
+                        <input value="@{Modbase-Condition} [Mod. divers] + @{classeConditionMod} [Mod. Classe] + @{BonusSaisonKoneko} [Mod. Race]" name="attr_Mod-Condition" type="hidden" />
+                        <button class="sheet-btn" type="roll" value="&{template:base} {{Test=Test de Condition}} {{Perso=@{character_name}}} {{Carac=VIG + ESP}} {{die1=[[1d@{VIGT}]]}} {{die2=[[1d@{ESPT}]]}} {{Mod=[[@{Mod-Condition}]]}} {{Condition=1}}"></button>
+                    </div>
+                </div>
+                <!--End of Condition -->
+                <!---:+:+:+: Vindikaell, Ajouter d'autres tests ici.  :+:+:+:--->
+            </div>
+            <div class="sheet-col">
+                <!--- Start Deplacement -->
+                <div class="skill-row">
+                    <div class="skill-head"><b>Deplacement</b></div>
+                    <div class="sheet-tips">
+                        <div class="sheet-help-def sheet-help">
+                            <div class="sheet-icon">
+                                <span class="sheet-icon-question">?</span>
+                            </div>
+                            <div class="sheet-help-content">
+                                <p>
+                                    Chaque jour de voyage, vous devez effectuer un test de Déplacement.
+                                </p>
+                                <p><b>Effet : </b> Le résultat du test détermine si vous avancez sans difficulté.</p>
+                                <p><b>Difficulté : </b> Paysage. 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-stat">
+                        <!---:+:+: Vindikaell, remplacer au besoin data-i18n="" vig/esp/int/agi :+:+:+:--->
+                        (<span data-i18n="vig">VIG</span><span> + </span><span data-i18n="agi">AGI</span>)
+                    </div>
+                    <div class="skill-inputs">
+                        <span data-i18n="mod-c">Mod :</span>
+                        <input value="0" name="attr_Modbase-Dep" type="number" />
+                        <input value="@{Modbase-Dep} [Mod. divers] + @{ModPaysage} + @{classeTravelMod} [Mod. Classe]" name="attr_Mod-Dep" type="hidden" />
+                        <button class="sheet-btn" type="roll" value="&{template:base} {{Test=Test de Déplacement}} {{Perso=@{character_name}}} {{Carac=VIG + AGI}} {{die1=[[1d@{VIGT}]]}} {{die2=[[1d@{AGIT}]]}} {{Mod=[[@{Mod-Dep} + @{Malustotal}]]}} {{Deplacement=1}}"></button>
+                    </div>
+                </div>
+                <!--End of Deplacement -->
+                <!---:+:+:+: Vindikaell, Ajouter d'autres tests ici.  :+:+:+:--->
+            </div>
+        </div>
     </div>
     <div class="tab-armes">
     </div>

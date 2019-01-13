@@ -84,6 +84,9 @@ div.sheet-perso-info label,
 div.sheet-desc label,
 div.sheet-saison label,
 div.sheet-etats label,
+div.sheet-arme-fav label,
+div.sheet-terrain label,
+div.sheet-climat label,
 div.sheet-tab-npc-sheet div.sheet-autres label,
 div.sheet-tab-gm-sheet label {
     display   : inline-block;
@@ -91,6 +94,8 @@ div.sheet-tab-gm-sheet label {
     text-align  : right;
     margin: 0% 2%;}
 
+div.sheet-climat div,
+div.sheet-terrain div,
 div.sheet-autres div,
 div.sheet-info div,
 div.sheet-etats div {
@@ -145,10 +150,36 @@ div.sheet-saison select {
     min-height:28px;
     width     :30%; }
 
-/* ----- Personnage row---- */
+/* ----- Character Tabs row---- */
 div.sheet-character-tabs {
     margin-bottom: 5px;}
 
+div.sheet-character-tabs input[type="radio"]:nth-of-type(1) {
+    margin-left : 2%;
+    margin-right: -9%;
+    width       : 9%;}
+
+div.sheet-character-tabs input[type="radio"]:nth-of-type(2) {
+    margin-right: -8%;
+    width       : 8%;}
+
+div.sheet-character-tabs input[type="radio"]:nth-of-type(3) {
+    margin-right: -16%;
+    width       : 16%;}
+
+div.sheet-character-tabs input[type="radio"]:nth-of-type(4) {
+    margin-right: -12%;
+    width       : 12%;}
+
+div.sheet-character-tabs input[type="radio"]:nth-of-type(5) {
+    margin-right: -10%;
+    width       : 10%;}
+
+div.sheet-character-tabs input[type="radio"]:nth-of-type(6) {
+    margin-right: -13%;
+    width       : 13%;}
+
+/* ----- Personnage row---- */
 div.sheet-perso-info label {
     width: 34%;}
 
@@ -160,7 +191,6 @@ div.sheet-perso-info input.sheet-short {
     width: 20%;}
 
 /* ----- Description row---- */
-
 div.sheet-desc label {
     width: 12%;}
 
@@ -170,6 +200,73 @@ div.sheet-desc input[type="text"] {
 div.sheet-desc div:nth-of-type(1n+3) label {
     text-align: center;
     width: 100%;}
+
+/* ----- Sorts, Musiques et Capacites row---- */
+div.sheet-talent div {
+    margin-bottom: 1%;}
+
+div.sheet-talent input[type="text"] {
+    text-align: center;
+    width: 32%;}
+
+div.sheet-talent input.sheet-tal-name {
+    width: 49%;}
+
+div.sheet-talent label {
+    width: 13%;}
+
+div.sheet-talent select {
+    width: 32%;}
+
+/* ----- Terrain & Climat row---- */
+div.sheet-terrain div.sheet-thead,
+div.sheet-climat div.sheet-thead  {
+    text-align: left;}
+
+div.sheet-terrain div.sheet-thead span,
+div.sheet-climat div.sheet-thead span {
+    margin-left: 7.5%;}
+
+div.sheet-terrain label,
+div.sheet-climat label {
+    margin-right: 0.5%;
+    width: 10%;}
+
+div.sheet-terrain label:nth-of-type(1n+2) {
+    width: 8%;}
+
+div.sheet-terrain label:nth-of-type(5n+5) {
+    width: 16%;}
+
+div.sheet-terrain div:nth-of-type(4) label {
+    width: auto;}
+
+div.sheet-ter-last label:nth-of-type(1) {
+    margin-left: 21.5%;}
+
+div.sheet-ter-last label:nth-of-type(2) {
+    margin-left: -0.1%;}
+
+/* ----- Skills tab ---- */
+div.sheet-skill-row {
+    display: inline-block;
+    margin: 1%;
+    width  : 100%;}
+
+div.sheet-skill-head {
+    display: inline-block;
+    text-align: right;
+    margin-left: 5%;
+    width: 35%;}
+
+div.sheet-skill-stat {
+    display: inline-block;
+    width: 19%;}
+
+div.sheet-skill-inputs {
+    display: inline-block;
+    margin-left: 5%;
+    width: 34%;}
 
 /*-- NPC sheet ---*/
 div.sheet-panneau select {
@@ -322,7 +419,8 @@ input.sheet-showDiv {
     position: absolute;}
 
 input.sheet-showDiv:checked ~ div.sheet-col div.sheet-row,
-input.sheet-showDiv:checked ~ div.sheet-arme-fav {
+input.sheet-showDiv:checked + div.sheet-thead + div.sheet-arme-fav,
+input.sheet-showDIV:checked + div.sheet-noble-skill {
     display: none;}
 
 /* -------------------------------------TEMPLATE ---------------------------------*/
