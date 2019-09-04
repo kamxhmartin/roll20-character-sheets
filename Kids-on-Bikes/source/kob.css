@@ -1,0 +1,131 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.charsheet {
+  overflow: auto;
+  width: 800px;
+  padding: 1%;
+  background-color: #eee;
+}
+
+textarea {
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: normal;
+  line-height: 1.5em;
+  overflow: scroll;
+  overflow-wrap: break-word;
+  padding: 2px;
+  resize: vertical;
+  vertical-align: top;
+  white-space: pre-line;
+}
+
+h1.sheet-logo {
+  margin: 1%;
+  text-align: center;
+  width: 100%;
+}
+
+div.sheet-box {
+  border: thin solid #bbb;
+  margin: 1%;
+  overflow: auto;
+  padding: 1%;
+  background-color: #fff;
+}
+
+div.sheet-grid {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  grid-column-gap: 0.2em;
+  grid-row-gap: 0.2em;
+}
+
+div.sheet-flex {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  max-width: 100%;
+  min-width: 410px;
+  vertical-align: top;
+  width: 45%;
+}
+
+div.sheet-kob-header div.sheet-grid.sheet-box {
+  min-width: 100%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+div.sheet-kob-header div.sheet-namecol {
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  padding: 1% 5% 1% 1%;
+}
+
+div.sheet-kob-header div.sheet-namecol img {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+div.sheet-kob-header div.sheet-namecol input,
+div.sheet-kob-header div.sheet-namecol textarea {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+div.sheet-kob-header div.sheet-namecol input[type="text"] {
+  width: 70%;
+}
+
+div.sheet-kob-header div.sheet-namecol textarea {
+  min-height: 20%;
+}
+
+div.sheet-kob-header div.sheet-namecol div.sheet-adversity {
+  display: inline;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 7;
+  grid-row: 7;
+}
+
+div.sheet-kob-header div.sheet-attrgrid {
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  padding: 1% 10%;
+}
+
+div.sheet-kob-header div.sheet-attrgrid input.sheet-attrnum {
+  font-size: 100%;
+  font-size: 4.5em;
+  height: 2em;
+  text-align: center;
+  width: 2em;
+}
+
+div.sheet-kob-header div.sheet-attrgrid div.sheet-attribute-col-left {
+  -ms-grid-columns: 3.3em 5fr;
+      grid-template-columns: 3.3em 5fr;
+}
+
+div.sheet-kob-header div.sheet-attrgrid div.sheet-attribute-col-right {
+  -ms-grid-columns: 5fr 3.3em;
+      grid-template-columns: 5fr 3.3em;
+}
+/*# sourceMappingURL=kob.css.map */
