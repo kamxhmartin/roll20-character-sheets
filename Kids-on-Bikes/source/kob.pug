@@ -1,163 +1,51 @@
+
+doctype html 
 // Credits
 // Designed by Squiggles
+// Update @kamxhmartin
 // Based on the World of Dungeons sheet created by Brandon Mulcahy
-.kob-logo
-  h1
-    img(alt='Kids on Bike Character Sheet', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png')
-  .sheet-box
-    .sheet-biocol(style='width: 55%;')
-      .sheet-startcol(style='width: 20%;')
-        img(alt='Name', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png')
-      .sheet-col(style='width: 60%;')
-        input(type='text', name='attr_character_name')
-      .sheet-startcol(style='width: 20%;')
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Age.png', alt='Age')
-      .sheet-col(style='width: 60%;')
-        input(type='text', name='attr_character_age')
-      .sheet-startcol(style='width: 20%;')
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fear.png', alt='Fear')
-      .sheet-col(style='width: 60%;')
-        input(type='text', name='attr_character_fear')
-      .sheet-startcol(style='width: 20%;')
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Motivation.png', alt='Motivation')
-      .sheet-col(style='width: 60%;')
-        input(type='text', name='attr_character_motiviation')
-      .sheet-startcol(style='width: 20%;')
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png', alt='Description')
-      .sheet-col(style='width: 60%;')
-        textarea(name='attr_character_description', rows='2')
-      .sheet-startcol(style='width: 20%;')
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Adversity_updated.png', alt='Adversity')
-      .sheet-col(style='width: 60%;')
-        span(style='margin-left: 0%;')
-        input(type='checkbox', name='attr_token1', value='1')
-        input(type='checkbox', name='attr_token2', value='1')
-        input(type='checkbox', name='attr_token3', value='1')
-        input(type='checkbox', name='attr_token4', value='1')
-        input(type='checkbox', name='attr_token5', value='1')
-        input(type='checkbox', name='attr_token6', value='1')
-        input(type='checkbox', name='attr_token7', value='1')
-        input(type='checkbox', name='attr_token8', value='1')
-        input(type='checkbox', name='attr_token9', value='1')
-        input(type='checkbox', name='attr_token10', value='1')
-        input(type='checkbox', name='attr_token11', value='1')
-        input(type='checkbox', name='attr_token12', value='1')
-        input(type='checkbox', name='attr_token13', value='1')
-        input(type='checkbox', name='attr_token14', value='1')
-        input(type='checkbox', name='attr_token15', value='1')
-    .sheet-col(style='width: 35%;')
-      .sheet-col(style='width: 42%;')
-        .sheet-startcol(style='width: 22%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
-          input.sheet-attrnum(type='text', name='attr_fight')
-          button(type='roll', value='** @{character_name} ** rolls a **FIGHT** check getting: [[@{fight}+?{modifier|0}]] ')  
-        .sheet-startcol(style='width: 22%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
-          input.sheet-attrnum(type='text', name='attr_brains')
-          button(type='roll', value='** @{character_name} ** rolls a **BRAINS** check getting: [[@{brains}+?{modifier|0}]] ')  
-        .sheet-startcol(style='width: 22%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
-          input.sheet-attrnum(type='text', name='attr_charm')
-          button(type='roll', value='** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] ')  
-      .sheet-col(style='width: 51%;')
-        .sheet-startcol(style='width: 60%;')
-          input.sheet-attrnum(type='text', name='attr_flight')
-          button(type='roll', value='** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png', width='30', height='100', alt='')
-        .sheet-startcol(style='width: 60%;')
-          input.sheet-attrnum(type='text', name='attr_brawn')
-          button(type='roll', value='** @{character_name} ** rolls a **BRAWN** check getting: [[@{brawn}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png', width='30', height='100', alt='')
-        .sheet-startcol(style='width: 60%;')
-          input.sheet-attrnum(type='text', name='attr_grit')
-          button(type='roll', value='** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
-          img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png', width='30', height='100', alt='')
-.sheet-box
-  .sheet-box
-    .sheet-startcol-strengths(style='width: 38%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png', width='250', height='45', alt='')
-      .sheet-col(style='width: 40%;')
-        input(type='checkbox', name='attr_cool', value='1')
-        label.sheet-inline COOL UNDER PRESSURE
-        br
-        input(type='checkbox', name='attr_easy_going', value='1')
-        label.sheet-inline EASYGOING
-        br
-        input(type='checkbox', name='attr_gross', value='1')
-        label.sheet-inline GROSS
-        br
-        input(type='checkbox', name='attr_heroic', value='1')
-        label.sheet-inline HEROIC
-        br
-        input(type='checkbox', name='attr_intuitive', value='1')
-        label.sheet-inline INTUITIVE
-        br
-        input(type='checkbox', name='attr_loyal', value='1')
-        label.sheet-inline LOYAL
-        br
-        input(type='checkbox', name='attr_lucky', value='1')
-        label.sheet-inline LUCKY
-        br
-        input(type='checkbox', name='attr_prepared', value='1')
-        label.sheet-inline PREPARED
-        br
-        input(type='checkbox', name='attr_protective', value='1')
-        label.sheet-inline PROTECTIVE
-        br
-      .sheet-col(style='width: 40%;')
-        input(type='checkbox', name='attr_quick_healing', value='1')
-        label.sheet-inline QUICK HEALING
-        br
-        input(type='checkbox', name='attr_rebellious', value='1')
-        label.sheet-inline REBELLIOUS
-        br
-        input(type='checkbox', name='attr_skilled_at', value='1')
-        label.sheet-inline SKILLED AT
-        br
-        input(type='text', name='attr_skill_description')
-        input(type='checkbox', name='attr_tough', value='1')
-        label.sheet-inline TOUGH
-        br
-        input(type='checkbox', name='attr_treasure_hunter', value='1')
-        label.sheet-inline TREASURE HUNTER
-        br
-        input(type='checkbox', name='attr_unassuming', value='1')
-        label.sheet-inline UNASSUMING
-        br
-        input(type='checkbox', name='attr_wealthy', value='1')
-        label.sheet-inline WEALTHY
-        br
-        br
-    .sheet-endcol-powers(style='width: 60%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flaws-1.png', width='250', height='45', alt='')
-      .sheet-col.sheet-nomargin
-      .sheet-col(style='width: 22%;')
-      - const flaws=[{'name': "ABSENT MINDED", "attr":"attr_absent_minded"},{"name": "BLUNT","attr":"attr_blunt" } ,{"name":"BOASTFUL", "attr":"attr_boastful"},{"name":"CLUMSY", "attr" : "attr_clumsy"},{"name":"CONCEITED", "attr":"attr_conceited"} , {"name":"COWARDLY", "attr": "attr_cowardly"},{"name": "DECEITFUL", "attr":"attr_deceitful"} ,  {"name":"DEMANDING", "attr": "attr_demanding"}]
-      each n in flaws 
-        input(type='checkbox', name=n.attr, value='1')
-        label.sheet-inline=n.name
-        br
-        
-  .sheet-box
-    .sheet-startcol(style='width: 38%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Powers-1.png', width='250', height='45', alt='')
-      textarea(name='attr_powers', rows='5')
-    .sheet-endcol(style='width: 58%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Backpack-1.png', width='250', height='45', alt='')
-      textarea(name='attr_backpack', rows='5')
-  .sheet-box
-    .sheet-onlycol(style='width: 98%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Notes-1.png', width='250', height='45', alt='')
-      textarea(name='attr_notes', rows='5', cols='70')
-      br
+html 
+	head 
+		.kob-logo
+			img(alt='Kids on Bike Character Sheet', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png')
+
+	body
+		.character(style='width: 60%; display: inline-block')
+			.characterAttributes()
+				img(alt='Name', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png')
+				input(type='text', name='attr_character_name')
+				br
+				img(alt='Age', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Age.png')
+				input(type='text', name='attr_character_age')
+				br
+				img(alt='Fear', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fear.png')
+				input(type='text', name='attr_character_fear')
+				br
+				img(alt='Motivation',src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Motivation.png')
+				input(type='text', name='attr_character_motiviation')
+				br
+				img(alt='Description', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png')
+				textarea(name='attr_character_description', rows='2')
+		
+		.stats(style='float: right')
+			.something(style='float:left')
+				img(alt='Kids on Bikes Stats', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/	Stats.png')
+				br
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', 	height='100', alt='Fight')
+				input(type='text', name='attr_fight')
+				br
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png', width='30', 	height='100', alt='Brains')
+				input(type='text', name='attr_brains')
+				br
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png', width='30', 	height='100', alt='Charm')
+				input(type='text', name='attr_charm')
+			.somethingelse(style='float:right')
+				input.sheet-attrnum(type='text', name='attr_flight')
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png', width='30', height='100', alt='Flight')
+
+
+
+
+
+
+

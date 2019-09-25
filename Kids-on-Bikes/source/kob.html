@@ -1,226 +1,31 @@
-<input name="attr_version" type="hidden" value="2.0">
+<!DOCTYPE html >
 <!-- Credits-->
 <!-- Designed by Squiggles-->
+<!-- Update @kamxhmartin-->
 <!-- Based on the World of Dungeons sheet created by Brandon Mulcahy-->
-
-<h1 class="logo">
-	<img alt="Kids on Bike Character Sheet" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png">
-</h1>
-<div class="kob-header">
-  	<div class="grid box">
-		<div class="namecol">
-			<img alt="Name" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png">
-			<input type="text" name="attr_character_name">
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Age.png" alt="Age">
-			<input type="text" name="attr_character_age">
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fear.png" alt="Fear">
-			<input type="text" name="attr_character_fear">
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Motivation.png" alt="Motivation">
-			<input type="text" name="attr_character_motiviation">
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png" alt="Description">
-			<textarea name="attr_character_description"></textarea>
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Adversity_updated.png" alt="Adversity">
-			<div class="adversity">
-				<input type="checkbox" name="attr_token1" value="1">
-				<input type="checkbox" name="attr_token2" value="1">
-				<input type="checkbox" name="attr_token3" value="1">
-				<input type="checkbox" name="attr_token4" value="1">
-				<input type="checkbox" name="attr_token5" value="1">
-				<input type="checkbox" name="attr_token6" value="1">
-				<input type="checkbox" name="attr_token7" value="1">
-				<input type="checkbox" name="attr_token8" value="1">
-				<input type="checkbox" name="attr_token9" value="1">
-				<input type="checkbox" name="attr_token10" value="1">
-				<input type="checkbox" name="attr_token11" value="1">
-				<input type="checkbox" name="attr_token12" value="1">
-				<input type="checkbox" name="attr_token13" value="1">
-				<input type="checkbox" name="attr_token14" value="1">
-				<input type="checkbox" name="attr_token15" value="1">
-			</div>
-		</div>
-		<div class="grid attrgrid">
-			<div class="grid attribute-col-left">
-				<button title="Fight roll" type="roll" value="** @{character_name} ** rolls a **FIGHT** check getting: [[@{fight}+?{modifier|0}]] ">
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png" alt="Fight">
-				</button>
-				<input class="sheet-attrnum" title="fight" type="text" name="attr_fight">
-				<button title="Brains roll" type="roll" value="** @{character_name} ** rolls a **BRAINS** check getting: [[@{brains}+?{modifier|0}]] ">
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png" alt="Brains">
-				</button>
-				<input class="sheet-attrnum" title="brains" type="text" name="attr_brains">
-				<button title="Charm roll" type="roll" value="** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] "> 
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png" alt="Charm">
-				</button>
-				<input class="sheet-attrnum" type="text" name="attr_charm">
-			</div>
-			<div class="grid attribute-col-right">
-				<input class="sheet-attrnum" type="text" name="attr_flight">
-				<button title="Flight Roll" type="roll" value="** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] "> 
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png" alt="Flight">
-				</button>
-				<input class="sheet-attrnum" type="text" name="attr_brawn">
-				<button title="Brawn roll" type="roll" value="** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] "> 
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png" alt="Brawn">
-				</button>
-				<input class="sheet-attrnum" type="text" name="attr_grit">
-				<button tile="Grit roll" type="roll" value="** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] ">
-					<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png" alt="Grit">
-				</button>
-			</div>
-		</div>
-  	</div>
-</div>
-<div class="sheet-box">
-  <div class="sheet-box">
-	<div class="sheet-gridrow-strengths">
-		<h2>
-			<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png" alt="Strengths">
-		</h2>
-	  <div class="sheet-col">
-		<input type="checkbox" name="attr_cool" value="1">
-		<label class="sheet-inline">COOL UNDER PRESSURE</label><br>
-		<input type="checkbox" name="attr_easy_going" value="1">
-		<label class="sheet-inline">EASYGOING</label><br>
-		<input type="checkbox" name="attr_gross" value="1">
-		<label class="sheet-inline">GROSS</label><br>
-		<input type="checkbox" name="attr_heroic" value="1">
-		<label class="sheet-inline">HEROIC</label><br>
-		<input type="checkbox" name="attr_intuitive" value="1">
-		<label class="sheet-inline">INTUITIVE</label><br>
-		<input type="checkbox" name="attr_loyal" value="1">
-		<label class="sheet-inline">LOYAL</label><br>
-		<input type="checkbox" name="attr_lucky" value="1">
-		<label class="sheet-inline">LUCKY</label><br>
-		<input type="checkbox" name="attr_prepared" value="1">
-		<label class="sheet-inline">PREPARED</label><br>
-		<input type="checkbox" name="attr_protective" value="1">
-		<label class="sheet-inline">PROTECTIVE</label><br>
-	  </div>
-	  <div class="sheet-col" style="width: 40%;">
-		<input type="checkbox" name="attr_quick_healing" value="1">
-		<label class="sheet-inline">QUICK HEALING</label><br>
-		<input type="checkbox" name="attr_rebellious" value="1">
-		<label class="sheet-inline">REBELLIOUS</label><br>
-		<input type="checkbox" name="attr_skilled_at" value="1">
-		<label class="sheet-inline">SKILLED AT</label><br>
-		<input type="text" name="attr_skill_description">
-		<input type="checkbox" name="attr_tough" value="1">
-		<label class="sheet-inline">TOUGH</label><br>
-		<input type="checkbox" name="attr_treasure_hunter" value="1">
-		<label class="sheet-inline">TREASURE HUNTER</label><br>
-		<input type="checkbox" name="attr_unassuming" value="1">
-		<label class="sheet-inline">UNASSUMING</label><br>
-		<input type="checkbox" name="attr_wealthy" value="1">
-		<label class="sheet-inline">WEALTHY</label><br><br>
-	  </div>
-	</div>
-	<div class="sheet-endcol-powers" style="width: 60%;">
-	  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flaws-1.png" width="250" height="45" alt=""></h2>
-	  <div class="sheet-col sheet-nomargin"></div>
-	  <div class="sheet-col" style="width: 22%;">
-		<input type="checkbox" name="attr_absent_minded" value="1">
-		<label class="sheet-inline">ABSENT MINDED</label><br>
-		<input type="checkbox" name="attr_blunt" value="1">
-		<label class="sheet-inline">BLUNT</label><br>
-		<input type="checkbox" name="attr_boastful" value="1">
-		<label class="sheet-inline">BOASTFUL</label><br>
-		<input type="checkbox" name="attr_clumsy" value="1">
-		<label class="sheet-inline">CLUMSY</label><br>
-		<input type="checkbox" name="attr_conceited" value="1">
-		<label class="sheet-inline">CONCEITED</label><br>
-		<input type="checkbox" name="attr_cowardly" value="1">
-		<label class="sheet-inline">COWARDLY</label><br>
-		<input type="checkbox" name="attr_deceitful" value="1">
-		<label class="sheet-inline">DECEITFUL</label><br>
-		<input type="checkbox" name="attr_demanding" value="1">
-		<label class="sheet-inline">DEMANDING</label><br>
-		<input type="checkbox" name="attr_disloyal" value="1">
-		<label class="sheet-inline">DISLOYAL</label><br>
-		<input type="checkbox" name="attr_disobedient" value="1">
-		<label class="sheet-inline">DISOBEDIENT</label><br>
-	  </div>
-	  <div class="sheet-col" style="width: 22%;">
-		<input type="checkbox" name="attr_dogmatic" value="1">
-		<label class="sheet-inline">DOGMATIC</label><br>
-		<input type="checkbox" name="attr_envious" value="1">
-		<label class="sheet-inline">ENVIOUS</label><br>
-		<input type="checkbox" name="attr_flippant" value="1">
-		<label class="sheet-inline">FLIPPANT</label><br>
-		<input type="checkbox" name="attr_gloomy" value="1">
-		<label class="sheet-inline">GLOOMY</label><br>
-		<input type="checkbox" name="attr_greedy" value="1">
-		<label class="sheet-inline">GREEDY</label><br>
-		<input type="checkbox" name="attr_hot_tempered" value="1">
-		<label class="sheet-inline">HOT-TEMPERED</label><br>
-		<input type="checkbox" name="attr_ignorant" value="1">
-		<label class="sheet-inline">IGNORANT</label><br>
-		<input type="checkbox" name="attr_inconsiderate" value="1">
-		<label class="sheet-inline">INCONSIDERATE</label><br>
-		<input type="checkbox" name="attr_insecure" value="1">
-		<label class="sheet-inline">INSECURE</label><br>
-		<input type="checkbox" name="attr_irrational" value="1">
-		<label class="sheet-inline">IRRATIONAL</label><br>
-	  </div>
-	  <div class="sheet-col" style="width: 22%;">
-		<input type="checkbox" name="attr_neurotic" value="1">
-		<label class="sheet-inline">NEUROTIC</label><br>
-		<input type="checkbox" name="attr_obnoxious" value="1">
-		<label class="sheet-inline">OBNOXIOUS</label><br>
-		<input type="checkbox" name="attr_paranoid" value="1">
-		<label class="sheet-inline">PARANOID</label><br>
-		<input type="checkbox" name="attr_patronizing" value="1">
-		<label class="sheet-inline">PATRONIZING</label><br>
-		<input type="checkbox" name="attr_perverse" value="1">
-		<label class="sheet-inline">PERVERSE</label><br>
-		<input type="checkbox" name="attr_petty" value="1">
-		<label class="sheet-inline">PETTY</label><br>
-		<input type="checkbox" name="attr_picky" value="1">
-		<label class="sheet-inline">PICKY</label><br>
-		<input type="checkbox" name="attr_prejudice" value="1">
-		<label class="sheet-inline">PREJUDICE</label><br>
-		<input type="checkbox" name="attr_prim" value="1">
-		<label class="sheet-inline">PRIM</label><br>
-		<input type="checkbox" name="attr_reckless" value="1">
-		<label class="sheet-inline">RECKLESS</label>
-	  </div>
-	  <div class="sheet-col" style="width: 22%;">
-		<input type="checkbox" name="attr_resentful" value="1">
-		<label class="sheet-inline">RESENTFUL</label><br>
-		<input type="checkbox" name="attr_restless" value="1">
-		<label class="sheet-inline">RESTLESS</label><br>
-		<input type="checkbox" name="attr_rude" value="1">
-		<label class="sheet-inline">RUDE</label><br>
-		<input type="checkbox" name="attr_secretive" value="1">
-		<label class="sheet-inline">SECRETIVE</label><br>
-		<input type="checkbox" name="attr_selfcentered" value="1">
-		<label class="sheet-inline">SELF-CENTERED</label><br>
-		<input type="checkbox" name="attr_selfpitying" value="1">
-		<label class="sheet-inline">SELF-PITYING</label><br>
-		<input type="checkbox" name="attr_slovenly" value="1">
-		<label class="sheet-inline">SLOVENLY</label><br>
-		<input type="checkbox" name="attr_superstitous" value="1">
-		<label class="sheet-inline">SUPERSTITIOUS</label><br>
-		<input type="checkbox" name="attr_vain" value="1">
-		<label class="sheet-inline">VAIN</label><br>
-		<input type="checkbox" name="attr_vindictive" value="1">
-		<label class="sheet-inline">VINDICTIVE</label><br>
-	  </div>
-	</div>
-  </div>
-  <div class="sheet-box">
-	<div class="sheet-gridrow" style="width: 38%;">
-	  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Powers-1.png" width="250" height="45" alt=""></h2>
-	  <textarea name="attr_powers" rows="5"></textarea>
-	</div>
-	<div class="sheet-endcol" style="width: 58%;">
-	  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Backpack-1.png" width="250" height="45" alt=""></h2>
-	  <textarea name="attr_backpack" rows="5"></textarea>
-	</div>
-  </div>
-  <div class="sheet-box">
-	<div class="sheet-onlycol" style="width: 98%;">
-	  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Notes-1.png" width="250" height="45" alt=""></h2>
-	  <textarea name="attr_notes" rows="5" cols="70"></textarea><br>
-	</div>
-  </div>
-</div>
+<html> 
+  <head> 
+    <div class="kob-logo"><img alt="Kids on Bike Character Sheet" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png"/></div>
+  </head>
+  <body>
+    <div class="character" style="width: 60%; display: inline-block">
+      <div class="characterAttributes"><img alt="Name" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png"/>
+        <input type="text" name="attr_character_name"/><br/><img alt="Age" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Age.png"/>
+        <input type="text" name="attr_character_age"/><br/><img alt="Fear" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fear.png"/>
+        <input type="text" name="attr_character_fear"/><br/><img alt="Motivation" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Motivation.png"/>
+        <input type="text" name="attr_character_motiviation"/><br/><img alt="Description" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png"/>
+        <textarea name="attr_character_description" rows="2"></textarea>
+      </div>
+    </div>
+    <div class="stats" style="float: right">
+      <div class="something" style="float:left"><img alt="Kids on Bikes Stats" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/	Stats.png"/><br/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png" width="30" height="100" alt="Fight"/>
+        <input type="text" name="attr_fight"/><br/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png" width="30" height="100" alt="Brains"/>
+        <input type="text" name="attr_brains"/><br/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png" width="30" height="100" alt="Charm"/>
+        <input type="text" name="attr_charm"/>
+      </div>
+      <div class="somethingelse" style="float:right">
+        <input class="sheet-attrnum" type="text" name="attr_flight"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png" width="30" height="100" alt="Flight"/>
+      </div>
+    </div>
+  </body>
+</html>
