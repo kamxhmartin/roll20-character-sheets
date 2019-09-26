@@ -10,7 +10,7 @@ html
 			img(alt='Kids on Bike Character Sheet', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png')
 
 	body
-		.character(style='width: 60%; display: inline-block')
+		.characterStuff(style='width: 45%; display: inline-block')
 			.characterAttributes()
 				img(alt='Name', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png')
 				input(type='text', name='attr_character_name')
@@ -25,23 +25,41 @@ html
 				input(type='text', name='attr_character_motiviation')
 				br
 				img(alt='Description', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png')
-				textarea(name='attr_character_description', rows='2')
+				textarea(name='attr_character_description', rows='2', style="width: 50;")
 		
-		.stats(style='float: right')
-			.something(style='float:left')
-				img(alt='Kids on Bikes Stats', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/	Stats.png')
+		.stats(style='width: 50%; float: right;padding:10px;display: inline-block')
+			img(alt='Kids on Bikes Stats', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Stats.png')
+			.statsLeft(style='float:left')
 				br
-				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', 	height='100', alt='Fight')
-				input(type='text', name='attr_fight')
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', height='100', alt='Fight')
+				button(type='roll', value='** @{character_name} ** rolls a **FIGHT** check getting: [[@{fight}+?{modifier|0}]] ')  
+				input.stat(type='text', name='attr_fight', )
 				br
 				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png', width='30', 	height='100', alt='Brains')
-				input(type='text', name='attr_brains')
+				button(type='roll', value='** @{character_name} ** rolls a **BRAINS** check getting: [[@{brains}+?{modifier|0}]] ')
+				input.stat(type='text', name='attr_brains', style="width:5px")
 				br
 				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png', width='30', 	height='100', alt='Charm')
-				input(type='text', name='attr_charm')
-			.somethingelse(style='float:right')
-				input.sheet-attrnum(type='text', name='attr_flight')
+				button(type='roll', value='** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] ')  
+				input.stat(type='text', name='attr_charm')
+
+			.statsRight(style='float:right')
+				input.stat(type='text', name='attr_flight')
+				button(type='roll', value='** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] ')
 				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png', width='30', height='100', alt='Flight')
+				br
+				input.stat(type='text', name='attr_brawn')
+				button(type='roll', value='** @{character_name} ** rolls a **BRAWN** check getting: [[@{brawn}+?{modifier|0}]] ')  
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png', width='30', height='100', alt='')
+				br
+				input.stat(type='text', name='attr_grit')
+				button(type='roll', value='** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] ')  
+				img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png', width='30', height='100', alt='')
+
+
+
+
+
 
 
 
