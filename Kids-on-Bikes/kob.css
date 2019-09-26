@@ -3,13 +3,6 @@ body {
  background-color: #bdbec1;
  background-repeat: repeat-x
 }
-.kob-logo {
-  border: thin solid #bbb;
-  margin: 10px;
-  overflow: auto;
-  padding: 10px;
-  background-color: #fff;
-}
 .sheet-box {
   border: thin solid #bbb;
   margin: 10px;
@@ -24,12 +17,6 @@ body {
   overflow: auto;
   padding: 10px;
   background-color: #fff;
-}
-.charsheet {
-  overflow: auto;
-  width: 800px;
-  padding: 10px;
-  background-color: #eee;
 }
 .sheet-startcol {
   clear: left;
