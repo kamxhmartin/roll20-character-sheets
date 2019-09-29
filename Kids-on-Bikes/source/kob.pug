@@ -6,30 +6,30 @@
     img(alt='Kids on Bike Character Sheet', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png')
   .sheet-box
     .sheet-biocol(style='width: 55%;')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(alt='Name', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png')
-      .sheet-col(style='width: 60%;')
+      .sheet-biolabelcol
         input(type='text', name='attr_character_name')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Age.png', alt='Age')
-      .sheet-col(style='width: 60%;')
+      .sheet-biolabelcol
         input(type='text', name='attr_character_age')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fear.png', alt='Fear')
-      .sheet-col(style='width: 60%;')
+      .sheet-biolabelcol
         input(type='text', name='attr_character_fear')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Motivation.png', alt='Motivation')
-      .sheet-col(style='width: 60%;')
+      .sheet-biolabelcol
         input(type='text', name='attr_character_motiviation')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Descriptions.png', alt='Description')
-      .sheet-col(style='width: 60%;')
+      .sheet-biolabelcol
         textarea(name='attr_character_description', rows='2')
-      .sheet-startcol(style='width: 20%;')
+      .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Adversity_updated.png', alt='Adversity')
-      .sheet-col(style='width: 60%;')
-        span(style='margin-left: 0%;')
+      .sheet-biolabelcol
+        span.sheet-adversitytokens(style='margin-left: 0%;')
         - let index = 1
         while index < 16
           input(type='checkbox', name='attr_token' + index++, value='1')

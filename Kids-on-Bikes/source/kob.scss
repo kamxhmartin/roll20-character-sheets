@@ -42,6 +42,17 @@ div.sheet-grid {
   grid-row-gap: 0.2em;
 }
 
+.sheet-biostartcol {
+  width: 20%;
+}
+
+.sheet-biolabelcol {
+  width: 60%;
+}
+span.sheet-adversitytokens {
+  margin-left: 0%;
+}
+
 div.sheet-flex {
   align-items: flex-start;
   display: inline-flex;
