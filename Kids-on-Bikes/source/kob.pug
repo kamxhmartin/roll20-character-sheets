@@ -33,9 +33,9 @@
         - let index = 1
         while index < 16
           input(type='checkbox', name='attr_token' + index++, value='1')
-       
-    .sheet-attrgrid
-      .sheet-col(style='width: 42%;')
+  
+    .sheet-box
+      .sheet-col
         .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', height='100', alt='')
         .sheet-statinputcol
@@ -51,7 +51,7 @@
         .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_charm')
           button(type='roll', value='** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] ')  
-      .sheet-col(style='width: 51%;')
+      .sheet-col
         .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_flight')
           button(type='roll', value='** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] ')  
@@ -67,34 +67,36 @@
           button(type='roll', value='** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] ')  
         .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png', width='30', height='100', alt='')
+
 .sheet-box
-  .sheet-box
-    .sheet-startcol-strengths
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png', width='250', height='45', alt='')
-      .sheet-strengthscol
-      - const strengths =[{'attr' : 'attr_cool', 'name' : 'COOL UNDER PRESSURE'}, {'attr' : 'attr_easy_going', 'name' : 'EASYGOING'}, {'attr' : 'attr_gross', 'name' : 'GROSS'}, {'attr' : 'attr_heroic', 'name' : 'HEROIC'}, {'attr' : 'attr_intuitive', 'name' : 'INTUITIVE'}, {'attr' : 'attr_loyal', 'name' : 'LOYAL'}, {'attr' : 'attr_lucky', 'name' : 'LUCKY'}, {'attr' : 'attr_prepared', 'name' : 'PREPARED'}, {'attr' : 'attr_protective', 'name' : 'PROTECTIVE'}, {'attr' : 'attr_quick_healing', 'name' : 'QUICK HEALING'}, {'attr' : 'attr_rebellious', 'name' : 'REBELLIOUS'}, {'attr' : 'attr_skilled_at', 'name' : 'SKILLED AT'}, {'attr' : 'attr_tough', 'name' : 'TOUGH'}, {'attr' : 'attr_treasure_hunter', 'name' : 'TREASURE HUNTER'}, {'attr' : 'attr_unassuming', 'name' : 'UNASSUMING'}, {'attr' : 'attr_wealthy', 'name' : 'WEALTHY'}]
-      each s in strengths
-        if s.name != 'SKILLED AT'
-          input(type='checkbox', name=s.attr, value='1')
-          label.sheet-inline=s.name
-          br
-        else
-          input(type='checkbox', name='attr_skilled_at', value='1')
-          label.sheet-inline SKILLED AT
-          br
-          input(type='text', name='attr_skill_description')
-     
-    .sheet-endcol-powers(style='width: 60%;')
-      h2
-        img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flaws-1.png', width='250', height='45', alt='')
-      .sheet-col.sheet-nomargin
-      .sheet-col(style='width: 22%;')
-       - const flaws = [{'name': "ABSENT MINDED", "attr":"attr_absent_minded"},{"name": "BLUNT","attr":"attr_blunt" } ,{"name":"BOASTFUL", "attr":"attr_boastful"},{"name":"CLUMSY", "attr" : "attr_clumsy"},{"name":"CONCEITED", "attr":"attr_conceited"} , {"name":"COWARDLY", "attr": "attr_cowardly"},{"name": "DECEITFUL", "attr":"attr_deceitful"} ,  {"name":"DEMANDING", "attr": "attr_demanding"},{'attr' :'attr_demanding', 'name': 'DEMANDING'}, {'attr' :'attr_disloyal', 'name': 'DISLOYAL'}, {'attr' :'attr_disobedient', 'name' : 'DISOBEDIENT'}, {'attr' :'attr_dogmatic', 'name' :'DOGMATIC'}, {'attr' :'attr_envious', 'name' : 'ENVIOUS'}, {'attr' :'attr_flippant', 'name' :'FLIPPANT'}, {'attr' :'attr_gloomy', 'name' : 'GLOOMY'}, {'attr' :'attr_greedy', 'name' :'GREEDY'}, {'attr' :'attr_hot_tempered', 'name' :'HOT-TEMPERED'}, {'attr' :'attr_ignorant', 'name' :'IGNORANT'}, {'attr' :'attr_inconsiderate', 'name' :'INCONSIDERATE'}, {'attr' :'attr_insecure', 'name' :'INSECURE'}, {'attr' :'attr_irrational', 'name' :'IRRATIONAL'}, {'attr' :'attr_neurotic', 'name' :'NEUROTIC'}, {'attr' :'attr_obnoxious', 'name' :'OBNOXIOUS'}, {'attr' :'attr_paranoid', 'name' :'PARANOID'}, {'attr' :'attr_patronizing', 'name' :'PATRONIZING'}, {'attr' :'attr_perverse', 'name' :'PERVERSE'}, {'attr' :'attr_petty', 'name' :'PETTY'}, {'attr' :'attr_picky', 'name' :'PICKY'}, {'attr' :'attr_prejudice', 'name' :'PREJUDICE'}, {'attr' :'attr_prim', 'name' :'PRIM'}, {'attr' :'attr_reckless', 'name' :'RECKLESS'},{'attr' :'attr_resentful', 'name' :'RESENTFUL'}, {'attr' :'attr_restless', 'name' :'RESTLESS'}, {'attr' :'attr_rude', 'name' :'RUDE'}, {'attr' :'attr_secretive', 'name' :'SECRETIVE'}, {'attr' :'attr_selfcentered', 'name' :'SELF-CENTERED'}, {'attr' :'attr_selfpitying', 'name' :'SELF-PITYING'}, {'attr' :'attr_slovenly', 'name' :'SLOVENLY'}, {'attr' :'attr_superstitous', 'name' :'SUPERSTITIOUS'}, {'attr' :'attr_vain', 'name' :'VAIN'}, {'attr' :'attr_vindictive', 'name' :'VINDICTIVE'} ]
-       each n in flaws 
-        input(type='checkbox', name=n.attr, value='1')
-        label.sheet-inline=n.name
+  .sheet-startcol-strengths
+    h2
+      img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png', width='250', height='45', alt='')
+    .sheet-strengthscol
+    - const strengths =[{'attr' : 'attr_cool', 'name' : 'COOL UNDER PRESSURE'}, {'attr' : 'attr_easy_going', 'name' : 'EASYGOING'}, {'attr' : 'attr_gross', 'name' : 'GROSS'}, {'attr' : 'attr_heroic', 'name' : 'HEROIC'}, {'attr' : 'attr_intuitive', 'name' : 'INTUITIVE'}, {'attr' : 'attr_loyal', 'name' : 'LOYAL'}, {'attr' : 'attr_lucky', 'name' : 'LUCKY'}, {'attr' : 'attr_prepared', 'name' : 'PREPARED'}, {'attr' : 'attr_protective', 'name' : 'PROTECTIVE'}, {'attr' : 'attr_quick_healing', 'name' : 'QUICK HEALING'}, {'attr' : 'attr_rebellious', 'name' : 'REBELLIOUS'}, {'attr' : 'attr_skilled_at', 'name' : 'SKILLED AT'}, {'attr' : 'attr_tough', 'name' : 'TOUGH'}, {'attr' : 'attr_treasure_hunter', 'name' : 'TREASURE HUNTER'}, {'attr' : 'attr_unassuming', 'name' : 'UNASSUMING'}, {'attr' : 'attr_wealthy', 'name' : 'WEALTHY'}]
+    each s in strengths
+      if s.name != 'SKILLED AT'
+        input(type='checkbox', name=s.attr, value='1')
+        label.sheet-inline=s.name
         br
+      else
+        input(type='checkbox', name='attr_skilled_at', value='1')
+        label.sheet-inline SKILLED AT
+        br
+        input(type='text', name='attr_skill_description')
+
+  .sheet-endcol-powers(style='width: 60%;')
+    h2
+      img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flaws-1.png', width='250', height='45', alt='')
+    .sheet-col.sheet-nomargin
+    .sheet-col(style='width: 22%;')
+     - const flaws = [{'name': "ABSENT MINDED", "attr":"attr_absent_minded"},{"name": "BLUNT","attr":"attr_blunt" } ,{"name":"BOASTFUL", "attr":"attr_boastful"},{"name":"CLUMSY", "attr" : "attr_clumsy"},{"name":"CONCEITED", "attr":"attr_conceited"} , {"name":"COWARDLY", "attr": "attr_cowardly"},{"name": "DECEITFUL", "attr":"attr_deceitful"} ,  {"name":"DEMANDING", "attr": "attr_demanding"},{'attr' :'attr_demanding', 'name': 'DEMANDING'}, {'attr' :'attr_disloyal', 'name': 'DISLOYAL'}, {'attr' :'attr_disobedient', 'name' : 'DISOBEDIENT'}, {'attr' :'attr_dogmatic', 'name' :'DOGMATIC'}, {'attr' :'attr_envious', 'name' : 'ENVIOUS'}, {'attr' :'attr_flippant', 'name' :'FLIPPANT'}, {'attr' :'attr_gloomy', 'name' : 'GLOOMY'}, {'attr' :'attr_greedy', 'name' :'GREEDY'}, {'attr' :'attr_hot_tempered', 'name' :'HOT-TEMPERED'}, {'attr' :'attr_ignorant', 'name' :'IGNORANT'}, {'attr' :'attr_inconsiderate', 'name' :'INCONSIDERATE'}, {'attr' :'attr_insecure', 'name' :'INSECURE'}, {'attr' :'attr_irrational', 'name' :'IRRATIONAL'}, {'attr' :'attr_neurotic', 'name' :'NEUROTIC'}, {'attr' :'attr_obnoxious', 'name' :'OBNOXIOUS'}, {'attr' :'attr_paranoid', 'name' :'PARANOID'}, {'attr' :'attr_patronizing', 'name' :'PATRONIZING'}, {'attr' :'attr_perverse', 'name' :'PERVERSE'}, {'attr' :'attr_petty', 'name' :'PETTY'}, {'attr' :'attr_picky', 'name' :'PICKY'}, {'attr' :'attr_prejudice', 'name' :'PREJUDICE'}, {'attr' :'attr_prim', 'name' :'PRIM'}, {'attr' :'attr_reckless', 'name' :'RECKLESS'},{'attr' :'attr_resentful', 'name' :'RESENTFUL'}, {'attr' :'attr_restless', 'name' :'RESTLESS'}, {'attr' :'attr_rude', 'name' :'RUDE'}, {'attr' :'attr_secretive', 'name' :'SECRETIVE'}, {'attr' :'attr_selfcentered', 'name' :'SELF-CENTERED'}, {'attr' :'attr_selfpitying', 'name' :'SELF-PITYING'}, {'attr' :'attr_slovenly', 'name' :'SLOVENLY'}, {'attr' :'attr_superstitous', 'name' :'SUPERSTITIOUS'}, {'attr' :'attr_vain', 'name' :'VAIN'}, {'attr' :'attr_vindictive', 'name' :'VINDICTIVE'} ]
+     each n in flaws 
+      input(type='checkbox', name=n.attr, value='1')
+      label.sheet-inline=n.name
+      br
+      
+.sheet-box
   .sheet-box
     .sheet-startcol(style='width: 38%;')
       h2
