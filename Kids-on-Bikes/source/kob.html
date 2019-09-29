@@ -5,7 +5,7 @@
 <div class="kob-logo">
   <h1><img alt="Kids on Bike Character Sheet" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png"/></h1>
   <div class="sheet-box">
-    <div class="sheet-biocol" style="width: 55%;">
+    <div class="sheet-biocol">
       <div class="sheet-biostartcol"><img alt="Name" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png"/></div>
       <div class="sheet-biolabelcol">
         <input type="text" name="attr_character_name"/>
@@ -27,7 +27,7 @@
         <textarea name="attr_character_description" rows="2"></textarea>
       </div>
       <div class="sheet-biostartcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Adversity_updated.png" alt="Adversity"/></div>
-      <div class="sheet-biolabelcol"><span class="sheet-adversitytokens" style="margin-left: 0%;"></span>
+      <div class="sheet-biolabelcol"><span class="sheet-adversitytokens"></span>
         <input type="checkbox" name="attr_token1" value="1"/>
         <input type="checkbox" name="attr_token2" value="1"/>
         <input type="checkbox" name="attr_token3" value="1"/>
@@ -45,49 +45,49 @@
         <input type="checkbox" name="attr_token15" value="1"/>
       </div>
     </div>
-    <div class="sheet-col" style="width: 35%;">
+    <div class="sheet-attrgrid">
       <div class="sheet-col" style="width: 42%;">
-        <div class="sheet-startcol" style="width: 22%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png" width="30" height="100" alt=""/></div>
-        <div class="sheet-col" style="width: 50%;">
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_fight"/>
           <button type="roll" value="** @{character_name} ** rolls a **FIGHT** check getting: [[@{fight}+?{modifier|0}]] "> </button>
         </div>
-        <div class="sheet-startcol" style="width: 22%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png" width="30" height="100" alt=""/></div>
-        <div class="sheet-col" style="width: 50%;">
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_brains"/>
           <button type="roll" value="** @{character_name} ** rolls a **BRAINS** check getting: [[@{brains}+?{modifier|0}]] "> </button>
         </div>
-        <div class="sheet-startcol" style="width: 22%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png" width="30" height="100" alt=""/></div>
-        <div class="sheet-col" style="width: 50%;">
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_charm"/>
           <button type="roll" value="** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] "> </button>
         </div>
       </div>
       <div class="sheet-col" style="width: 51%;">
-        <div class="sheet-startcol" style="width: 60%;">
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_flight"/>
           <button type="roll" value="** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] "> </button>
         </div>
-        <div class="sheet-col" style="width: 18%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png" width="30" height="100" alt=""/></div>
-        <div class="sheet-startcol" style="width: 60%;">
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_brawn"/>
           <button type="roll" value="** @{character_name} ** rolls a **BRAWN** check getting: [[@{brawn}+?{modifier|0}]] "> </button>
         </div>
-        <div class="sheet-col" style="width: 18%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png" width="30" height="100" alt=""/></div>
-        <div class="sheet-startcol" style="width: 60%;">
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_grit"/>
           <button type="roll" value="** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] "> </button>
         </div>
-        <div class="sheet-col" style="width: 18%;"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png" width="30" height="100" alt=""/></div>
+        <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png" width="30" height="100" alt=""/></div>
       </div>
     </div>
   </div>
 </div>
 <div class="sheet-box">
   <div class="sheet-box">
-    <div class="sheet-startcol-strengths" style="width: 38%;">
+    <div class="sheet-startcol-strengths">
       <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png" width="250" height="45" alt=""/></h2>
-      <div class="sheet-col" style="width: 40%;"></div>
+      <div class="sheet-strengthscol"></div>
       <input type="checkbox" name="attr_cool" value="1"/>
       <label class="sheet-inline">COOL UNDER PRESSURE</label><br/>
       <input type="checkbox" name="attr_easy_going" value="1"/>

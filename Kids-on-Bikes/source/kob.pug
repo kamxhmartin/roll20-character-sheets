@@ -5,7 +5,7 @@
   h1
     img(alt='Kids on Bike Character Sheet', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/KOBLogo.png')
   .sheet-box
-    .sheet-biocol(style='width: 55%;')
+    .sheet-biocol
       .sheet-biostartcol
         img(alt='Name', src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Name.png')
       .sheet-biolabelcol
@@ -29,50 +29,50 @@
       .sheet-biostartcol
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Adversity_updated.png', alt='Adversity')
       .sheet-biolabelcol
-        span.sheet-adversitytokens(style='margin-left: 0%;')
+        span.sheet-adversitytokens
         - let index = 1
         while index < 16
           input(type='checkbox', name='attr_token' + index++, value='1')
        
-    .sheet-col(style='width: 35%;')
+    .sheet-attrgrid
       .sheet-col(style='width: 42%;')
-        .sheet-startcol(style='width: 22%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_fight')
           button(type='roll', value='** @{character_name} ** rolls a **FIGHT** check getting: [[@{fight}+?{modifier|0}]] ')  
-        .sheet-startcol(style='width: 22%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brains.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_brains')
           button(type='roll', value='** @{character_name} ** rolls a **BRAINS** check getting: [[@{brains}+?{modifier|0}]] ')  
-        .sheet-startcol(style='width: 22%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Charm.png', width='30', height='100', alt='')
-        .sheet-col(style='width: 50%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_charm')
           button(type='roll', value='** @{character_name} ** rolls a **CHARM** check getting: [[@{charm}+?{modifier|0}]] ')  
       .sheet-col(style='width: 51%;')
-        .sheet-startcol(style='width: 60%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_flight')
           button(type='roll', value='** @{character_name} ** rolls a **FLIGHT** check getting: [[@{flight}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flight.png', width='30', height='100', alt='')
-        .sheet-startcol(style='width: 60%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_brawn')
           button(type='roll', value='** @{character_name} ** rolls a **BRAWN** check getting: [[@{brawn}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Brawn.png', width='30', height='100', alt='')
-        .sheet-startcol(style='width: 60%;')
+        .sheet-statinputcol
           input.sheet-attrnum(type='text', name='attr_grit')
           button(type='roll', value='** @{character_name} ** rolls a **GRIT** check getting: [[@{grit}+?{modifier|0}]] ')  
-        .sheet-col(style='width: 18%;')
+        .sheet-statlabelcol
           img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Grit.png', width='30', height='100', alt='')
 .sheet-box
   .sheet-box
-    .sheet-startcol-strengths(style='width: 38%;')
+    .sheet-startcol-strengths
       h2
         img(src='https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png', width='250', height='45', alt='')
-      .sheet-col(style='width: 40%;')
+      .sheet-strengthscol
       - const strengths =[{'attr' : 'attr_cool', 'name' : 'COOL UNDER PRESSURE'}, {'attr' : 'attr_easy_going', 'name' : 'EASYGOING'}, {'attr' : 'attr_gross', 'name' : 'GROSS'}, {'attr' : 'attr_heroic', 'name' : 'HEROIC'}, {'attr' : 'attr_intuitive', 'name' : 'INTUITIVE'}, {'attr' : 'attr_loyal', 'name' : 'LOYAL'}, {'attr' : 'attr_lucky', 'name' : 'LUCKY'}, {'attr' : 'attr_prepared', 'name' : 'PREPARED'}, {'attr' : 'attr_protective', 'name' : 'PROTECTIVE'}, {'attr' : 'attr_quick_healing', 'name' : 'QUICK HEALING'}, {'attr' : 'attr_rebellious', 'name' : 'REBELLIOUS'}, {'attr' : 'attr_skilled_at', 'name' : 'SKILLED AT'}, {'attr' : 'attr_tough', 'name' : 'TOUGH'}, {'attr' : 'attr_treasure_hunter', 'name' : 'TREASURE HUNTER'}, {'attr' : 'attr_unassuming', 'name' : 'UNASSUMING'}, {'attr' : 'attr_wealthy', 'name' : 'WEALTHY'}]
       each s in strengths
         if s.name != 'SKILLED AT'
