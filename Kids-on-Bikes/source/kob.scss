@@ -38,22 +38,33 @@ div.sheet-box {
   background-color: #fff;
 }
 
-div.sheet-col {
-  display: inline-grid;
+.sheet-boxstrengthsflaws {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 0.2em;
-  grid-row-gap: 0.2em;
-  .sheet-statlabelcol {
-    width: 18%;
-  }
-  .sheet-statinputcol {
-    width: 20;
-  }
+  border: thin solid #bbb;
+  margin: 1%;
+  padding: 1%;
+  background-color: #fff;
+  font-size: 1em;
+}
+
+.sheet-col {
+  display: flex;
+  align-items: center;
+}
+
+.sheet-statcol {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sheet-startcol-strengths {
+  display: grid;
 }
 
 .sheet-strengthscol {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr 2fr;
 }
 
 div.sheet-flex {

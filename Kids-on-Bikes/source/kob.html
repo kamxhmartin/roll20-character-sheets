@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="sheet-box">
-      <div class="sheet-col">
+      <div class="sheet-statcol">
         <div class="sheet-statlabelcol"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Fight.png" width="30" height="100" alt=""/></div>
         <div class="sheet-statinputcol">
           <input class="sheet-attrnum" type="text" name="attr_fight"/>
@@ -83,10 +83,10 @@
     </div>
   </div>
 </div>
-<div class="sheet-box">
+<div class="sheet-boxstrengthsflaws">
   <div class="sheet-startcol-strengths">
     <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Strengths-1.png" width="250" height="45" alt=""/></h2>
-    <div class="sheet-strengthscol"></div>
+    <div class="sheet-col"></div>
     <input type="checkbox" name="attr_cool" value="1"/>
     <label class="sheet-inline">COOL UNDER PRESSURE</label><br/>
     <input type="checkbox" name="attr_easy_going" value="1"/>
@@ -121,10 +121,9 @@
     <input type="checkbox" name="attr_wealthy" value="1"/>
     <label class="sheet-inline">WEALTHY</label><br/>
   </div>
-  <div class="sheet-endcol-powers" style="width: 60%;">
+  <div class="sheet-endcol-powers">
     <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Flaws-1.png" width="250" height="45" alt=""/></h2>
-    <div class="sheet-col sheet-nomargin"></div>
-    <div class="sheet-col" style="width: 22%;">
+    <div class="sheet-col">
       <input type="checkbox" name="attr_absent_minded" value="1"/>
       <label class="sheet-inline">ABSENT MINDED</label><br/>
       <input type="checkbox" name="attr_blunt" value="1"/>
@@ -211,20 +210,14 @@
   </div>
 </div>
 <div class="sheet-box">
-  <div class="sheet-box">
-    <div class="sheet-startcol" style="width: 38%;">
-      <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Powers-1.png" width="250" height="45" alt=""/></h2>
-      <textarea name="attr_powers" rows="5"></textarea>
-    </div>
-    <div class="sheet-endcol" style="width: 58%;">
-      <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Backpack-1.png" width="250" height="45" alt=""/></h2>
-      <textarea name="attr_backpack" rows="5"></textarea>
-    </div>
-  </div>
-  <div class="sheet-box">
-    <div class="sheet-onlycol" style="width: 98%;">
-      <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Notes-1.png" width="250" height="45" alt=""/></h2>
-      <textarea name="attr_notes" rows="5" cols="70"></textarea><br/>
-    </div>
-  </div>
+  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Powers-1.png" width="250" height="45" alt=""/>
+    <textarea name="attr_powers" rows="5"></textarea>
+  </h2>
+  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Backpack-1.png" width="250" height="45" alt=""/>
+    <textarea name="attr_backpack" rows="5"></textarea>
+  </h2>
+</div>
+<div class="sheet-box"> 
+  <h2><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Kids-on-Bikes/images/Label-Notes-1.png" width="250" height="45" alt=""/></h2>
+  <textarea name="attr_notes" rows="5" cols="70"></textarea><br/>
 </div>
